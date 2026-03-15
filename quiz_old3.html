@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FE9N3JWSGN"></script>
+<script src="analytics.js"></script>
+<title>Len's 80sGrid.com Music Edition - Quiz 3</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://80sgrid.com/quiz3">
+<meta property="og:title" content="Len's 80sGrid.com Music Edition - Quiz 3">
+<meta property="og:description" content="Test your 80s music knowledge! Can you name facts about The Police, The Cure, and Depeche Mode?">
+<meta property="og:image" content="https://raw.githubusercontent.com/80sGrid/80sgrid.github.io/main/images/header26.jpg">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://80sgrid.com/quiz3">
+<meta property="twitter:title" content="Len's 80sGrid.com Music Edition - Quiz 3">
+<meta property="twitter:description" content="Test your 80s music knowledge! Can you name facts about The Police, The Cure, and Depeche Mode?">
+<meta property="twitter:image" content="https://raw.githubusercontent.com/80sGrid/80sgrid.github.io/main/images/header26.jpg">
+<style>
+body {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+margin: 0;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+padding: 20px;
+overflow-x: hidden;
+box-sizing: border-box;
+}
+.container {
+background: white;
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+max-width: 700px;
+width: 100%;
+box-sizing: border-box;
+}
+.logo-img { display:block; margin:0 auto 10px; max-width:100%; height:auto; }
+.tagline-sub {
+text-align: center;
+font-family: 'Georgia', serif;
+font-size: 1.4em;
+font-style: italic;
+color: #6a0dad;
+letter-spacing: 2px;
+margin: 0 0 20px;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+}
+.subtitle {
+text-align: center;
+margin-bottom: 30px;
+font-size: 4.5em;
+font-weight: bold;
+color: #ff006e;
+text-shadow: 3px 3px 0px #fb5607, 6px 6px 0px #ffbe0b, 9px 9px 0px #8338ec, 12px 12px 0px #3a86ff;
+font-family: 'Arial Black', sans-serif;
+letter-spacing: 5px;
+transform: perspective(500px) rotateX(5deg);
+}
+.how-to-play {
+background: linear-gradient(135deg, #FF1493 0%, #8B00FF 50%, #00CED1 100%);
+padding: 20px;
+border-radius: 12px;
+margin-bottom: 20px;
+color: white;
+box-shadow: 0 0 20px rgba(255,20,147,.4);
+border: 3px solid rgba(255,255,255,.3);
+}
+.how-to-play h2 { text-align:center; margin-top:0; margin-bottom:10px; font-size:1.5em; text-shadow:2px 2px 4px rgba(0,0,0,.5); }
+.how-to-play p { margin:0; line-height:1.6; text-shadow:1px 1px 2px rgba(0,0,0,.5); }
+.grid {
+display: grid;
+grid-template-columns: 100px repeat(3, 1fr);
+grid-template-rows: 70px repeat(3, 110px);
+gap: 8px;
+margin-bottom: 20px;
+}
+.header {
+background: #667eea;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 8px;
+border-radius: 8px;
+font-weight: bold;
+font-size: 0.85em;
+line-height: 1.2;
+word-wrap: break-word;
+hyphens: auto;
+}
+.header.col-header:nth-child(2) { background:linear-gradient(135deg,#FF1493,#FF69B4); box-shadow:0 0 15px rgba(255,20,147,.6); border:2px solid #FF1493; }
+.header.col-header:nth-child(3) { background:linear-gradient(135deg,#00CED1,#1E90FF); box-shadow:0 0 15px rgba(0,206,209,.6); border:2px solid #00CED1; }
+.header.col-header:nth-child(4) { background:linear-gradient(135deg,#FFD700,#FFA500); box-shadow:0 0 15px rgba(255,215,0,.6); border:2px solid #FFD700; color:#000; font-weight:900; }
+.header.row-header { background:linear-gradient(135deg,#8B00FF,#DA70D6); box-shadow:0 0 15px rgba(139,0,255,.6); border:2px solid #8B00FF; }
+.col-header { grid-row: 1; }
+.row-header { grid-column: 1; }
+.cell { background:#f8f9fa; border:2px solid #dee2e6; border-radius:8px; display:flex; align-items:center; justify-content:center; padding:14px 8px; cursor:pointer; }
+.cell input { width:100%; padding:10px 8px; border:none; background:transparent; text-align:center; font-size:0.7em; font-weight:bold; outline:none; cursor:pointer; pointer-events:none; line-height:1.8; }
+.cell input::placeholder { color:#adb5bd; font-style:italic; white-space:normal; word-spacing:100vw; }
+.cell.correct { background:#d4edda; border-color:#28a745; }
+.cell.incorrect { background:#f8d7da; border-color:#dc3545; }
+.button-container { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:10px; }
+button { background:#667eea; color:white; border:none; padding:12px 25px; border-radius:8px; cursor:pointer; font-size:1em; transition:background 0.3s; }
+button:hover { background:#5568d3; }
+#results { margin-top:20px; padding:20px; background:#e7f3ff; border:2px solid #667eea; border-radius:8px; text-align:center; }
+
+/* INPUT MODAL */
+.input-modal {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: white;
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+z-index: 3500;
+display: none;
+min-width: 300px;
+max-width: 90%;
+box-sizing: border-box;
+}
+.input-modal.active { display: block; }
+.input-modal-overlay {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.7);
+z-index: 3499;
+display: none;
+}
+.input-modal-overlay.active { display: block; }
+.input-modal h3 {
+margin-top: 0;
+margin-bottom: 20px;
+color: #333;
+font-size: 1.2em;
+text-align: center;
+}
+.input-modal input {
+width: 100%;
+padding: 15px;
+font-size: 1.2em;
+border: 2px solid #667eea;
+border-radius: 8px;
+margin-bottom: 15px;
+box-sizing: border-box;
+}
+.input-modal-buttons { display: flex; gap: 10px; }
+.input-modal-buttons button { flex: 1; padding: 12px; font-size: 1em; }
+
+/* NEXT QUIZ BUTTON */
+.next-quiz-btn {
+display: inline-block;
+margin: 15px auto;
+background: linear-gradient(135deg, #FF1493, #8B00FF);
+color: white;
+text-decoration: none;
+padding: 18px 40px;
+border-radius: 12px;
+font-size: 1.3em;
+font-weight: 900;
+font-family: 'Arial Black', sans-serif;
+letter-spacing: 2px;
+box-shadow: 0 0 25px rgba(255,20,147,0.7), 0 5px 15px rgba(0,0,0,0.3);
+animation: pulse 1.5s infinite;
+}
+.next-quiz-btn:hover { transform: scale(1.05); }
+@keyframes pulse {
+0%,100% { box-shadow:0 0 25px rgba(255,20,147,0.7),0 5px 15px rgba(0,0,0,0.3); }
+50% { box-shadow:0 0 45px rgba(255,20,147,1),0 5px 20px rgba(0,0,0,0.4); }
+}
+
+/* SURVEY */
+.survey-question {
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+padding: 25px;
+border-radius: 12px;
+margin-top: 20px;
+color: white;
+box-shadow: 0 0 20px rgba(102,126,234,.4);
+border: 3px solid rgba(255,255,255,.3);
+}
+.survey-question h3 { text-align:center; margin-top:0; margin-bottom:20px; font-size:1.3em; text-shadow:2px 2px 4px rgba(0,0,0,.5); }
+.survey-options { display:flex; flex-direction:column; gap:12px; }
+.survey-option { background:rgba(255,255,255,.2); padding:15px; border-radius:8px; cursor:pointer; transition:all .3s; border:2px solid transparent; text-align:center; font-weight:bold; }
+.survey-option:hover { background:rgba(255,255,255,.3); border-color:white; transform:scale(1.02); }
+.survey-option.selected { background:#00ff00; color:#000; border-color:#00ff00; box-shadow:0 0 20px rgba(0,255,0,.5); }
+
+/* MY STATS MODAL */
+.stats-modal { display:none; position:fixed; inset:0; z-index:3000; background:rgba(0,0,0,0.75); align-items:center; justify-content:center; }
+.stats-modal.show { display:flex; }
+.stats-box { background:#000; border:3px solid #FF1493; border-radius:12px; padding:35px 30px; width:90%; max-width:320px; font-family:'Courier New',monospace; box-shadow:0 0 40px rgba(255,20,147,0.6); }
+.stats-box h2 { color:#FF1493; text-shadow:0 0 10px #FF1493; font-size:1.3em; letter-spacing:3px; margin:0 0 5px; text-align:center; }
+.stats-sub { color:#00ffff; text-align:center; font-size:0.75em; letter-spacing:2px; margin-bottom:20px; }
+.stat-row { border-bottom:1px solid rgba(255,20,147,0.3); padding:12px 0; display:flex; justify-content:space-between; align-items:center; }
+.stat-label { color:#aaa; font-size:0.85em; letter-spacing:1px; }
+.stat-value { color:#ffff00; font-size:1.2em; font-weight:bold; text-shadow:0 0 8px #ffff00; }
+.stats-close { display:block; margin:25px auto 0; background:#FF1493; color:#000; border:none; padding:10px 30px; font-family:'Courier New',monospace; font-weight:bold; font-size:1em; cursor:pointer; letter-spacing:2px; border-radius:4px; }
+
+/* DAILY LIMIT MODAL */
+.limit-modal { display:none; position:fixed; inset:0; z-index:3000; background:rgba(0,0,0,0.85); align-items:center; justify-content:center; }
+.limit-modal.show { display:flex; }
+.limit-box { background:#000; border:4px solid #FF1493; border-radius:12px; padding:40px 30px; text-align:center; font-family:'Courier New',monospace; max-width:320px; width:90%; box-shadow:0 0 40px rgba(255,20,147,0.7); }
+.limit-box h2 { color:#ffff00; text-shadow:0 0 10px #ffff00; font-size:1.4em; letter-spacing:3px; margin-bottom:15px; }
+.limit-box p { color:#00ff00; line-height:1.7; margin-bottom:20px; }
+.limit-box button { background:#FF1493; color:#000; border:none; padding:12px 30px; font-family:'Courier New',monospace; font-weight:bold; font-size:1em; cursor:pointer; border-radius:4px; }
+
+/* HIGH SCORE ENTRY */
+.high-score-entry { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#000; color:#00ff00; padding:40px; border-radius:10px; border:4px solid #00ff00; box-shadow:0 0 30px rgba(0,255,0,.5); text-align:center; z-index:1000; font-family:'Courier New',monospace; width:90%; max-width:340px; box-sizing:border-box; }
+.high-score-entry h2 { color:#ffff00; text-shadow:0 0 10px #ffff00; margin-bottom:20px; }
+.initials-input { display:flex; gap:15px; justify-content:center; margin:20px 0; }
+.initials-input input { width:60px; height:80px; font-size:3em; text-align:center; background:#000; border:3px solid #00ff00; color:#00ff00; text-transform:uppercase; font-family:'Courier New',monospace; }
+.arcade-button { background:#00ff00; color:#000; border:none; padding:15px 40px; font-size:1.2em; font-weight:bold; cursor:pointer; font-family:'Courier New',monospace; box-shadow:0 0 20px rgba(0,255,0,.5); }
+.arcade-button:hover { background:#00cc00; }
+
+/* LEADERBOARD */
+.leaderboard {
+margin-top: 30px;
+background: #000 url('https://www.dropbox.com/scl/fi/awkqv845s9slzs58wbz12/highscores.png?rlkey=r7n3hyq795099jgavqyk5xe1t&st=4rsy91bk&raw=1') center top / contain no-repeat;
+color: #00ff00;
+padding: 15px;
+border-radius: 10px;
+border: 3px solid #00ff00;
+font-family: 'Courier New', monospace;
+box-shadow: 0 0 30px rgba(0,255,0,.5), inset 0 0 20px rgba(0,255,0,.1);
+min-height: 300px;
+width: 100%;
+box-sizing: border-box;
+}
+.leaderboard-scores-wrap { margin-top:160px; background:rgba(0,0,0,0.75); border-radius:8px; padding:15px 10px 10px; }
+.leaderboard-subtitle { text-align:center; color:#00ffff; margin-bottom:15px; font-size:0.85em; letter-spacing:3px; }
+.leaderboard-item { display:grid; grid-template-columns:40px 70px 1fr 80px; padding:8px 5px; border-bottom:1px solid rgba(0,255,0,.3); font-size:1em; letter-spacing:2px; }
+.leaderboard-item:last-child { border-bottom:none; }
+.leaderboard-rank { color:#ffff00; text-shadow:0 0 5px #ffff00; }
+.leaderboard-initials { color:#00ff00; font-weight:bold; text-shadow:0 0 5px #00ff00; }
+.leaderboard-score { color:#ff00ff; text-shadow:0 0 5px #ff00ff; }
+.leaderboard-date { color:#00ffff; text-align:right; font-size:0.8em; }
+
+@media (max-width:768px) {
+.container { padding:15px; }
+.subtitle { font-size:2.5em; letter-spacing:3px; text-shadow:2px 2px 0px #fb5607,4px 4px 0px #ffbe0b,6px 6px 0px #8338ec,8px 8px 0px #3a86ff; }
+.grid { grid-template-columns:80px repeat(3,1fr); grid-template-rows:60px repeat(3,100px); gap:6px; }
+.header { font-size:.65em; padding:6px; }
+.next-quiz-btn { font-size:1.1em; padding:15px 25px; }
+.leaderboard-scores-wrap { margin-top:100px; }
+}
+
+/* LIFELINE */
+.lifeline-bar { display:flex; align-items:center; justify-content:center; gap:10px; margin:0 0 16px; padding:10px 18px; background:linear-gradient(135deg,#fff0f8,#f0f0ff); border:2px solid rgba(139,0,255,0.25); border-radius:10px; font-family:'Arial Black',sans-serif; }
+.lifeline-label { font-size:0.8em; font-weight:900; color:#555; letter-spacing:1px; text-transform:uppercase; }
+.lifeline-pips { display:flex; gap:5px; }
+.lifeline-pip { width:24px; height:24px; border-radius:50%; background:linear-gradient(135deg,#FF1493,#8B00FF); box-shadow:0 0 8px rgba(255,20,147,0.5); display:flex; align-items:center; justify-content:center; font-size:0.75em; transition:all 0.3s; }
+.lifeline-pip.used { background:#dee2e6; box-shadow:none; }
+.lifeline-count { font-size:0.82em; color:#888; font-style:italic; }
+.lifeline-count.empty { color:#dc3545; font-weight:bold; font-style:normal; }
+.no-lifeline-badge { display:none; text-align:center; margin:10px 0; padding:8px 14px; background:linear-gradient(135deg,#FFD700,#FFA500); border-radius:8px; font-weight:900; font-size:0.9em; color:#000; box-shadow:0 0 12px rgba(255,215,0,0.5); }
+.mc-toggle-btn { display:block; width:100%; margin-top:12px; padding:11px; background:linear-gradient(135deg,#FF1493,#8B00FF); color:white; border:none; border-radius:8px; font-size:0.95em; font-weight:bold; cursor:pointer; letter-spacing:0.5px; transition:opacity 0.2s; }
+.mc-toggle-btn:hover { opacity:0.88; }
+.mc-toggle-btn:disabled { opacity:0.35; cursor:not-allowed; }
+.mc-section { display:none; margin-top:8px; }
+.mc-section.visible { display:block; }
+.mc-option { display:block; width:100%; margin-bottom:10px; padding:14px 12px; background:#f8f0ff; border:2px solid #8B00FF; border-radius:10px; font-size:0.95em; font-weight:bold; color:#4a0080; cursor:pointer; text-align:center; transition:background 0.15s,transform 0.1s; box-sizing:border-box; }
+.mc-option:hover { background:#e8c8ff; transform:scale(1.02); }
+.mc-option:last-child { margin-bottom:0; }
+.text-section { }
+.text-section.hidden { display:none; }
+.page-nav { display:flex; justify-content:center; gap:6px; margin-bottom:8px; flex-wrap:wrap; }
+.page-nav a { display:inline-block; padding:5px 11px; border-radius:6px; background:#f0f0f0; color:#667eea; text-decoration:none; font-size:0.8em; font-weight:bold; border:2px solid #dee2e6; transition:background 0.2s; }
+.page-nav a:hover { opacity:0.85; }
+.page-nav a.easy { background:#28a745; color:white; border-color:#28a745; }
+.page-nav a.medium { background:#fd7e14; color:white; border-color:#fd7e14; }
+.page-nav a.hard { background:#dc3545; color:white; border-color:#dc3545; }
+.page-nav a.current { box-shadow: 0 0 12px rgba(0,0,0,0.4); transform: scale(1.15); z-index:1; }
+.nav-legend { text-align:center; font-size:0.75em; color:#666; margin-bottom:16px; }
+
+/* DIFFICULTY BADGE */
+.difficulty-badge { display:flex; align-items:center; justify-content:center; gap:12px; margin:0 0 20px; padding:14px 20px; border-radius:12px; border:2px solid var(--badge-color); background:color-mix(in srgb,var(--badge-color) 10%,white); box-shadow:0 0 20px var(--badge-glow); }
+.badge-left { text-align:left; }
+.badge-label { font-family:'Arial Black',sans-serif; font-size:1.1em; font-weight:900; letter-spacing:2px; color:var(--badge-color); text-transform:uppercase; }
+.badge-score { font-size:0.8em; color:#666; font-weight:bold; margin-top:2px; }
+.badge-stars { font-size:1.5em; color:var(--badge-color); letter-spacing:2px; }
+.badge-desc { font-size:0.75em; color:#888; font-style:italic; margin-top:2px; }
+
+/* FOOTNOTES */
+.footnote-box { background:#f8f0ff; border-left:4px solid #8B00FF; padding:14px 16px; border-radius:8px; margin-bottom:20px; font-size:0.85em; line-height:1.7; color:#444; }
+.footnote-box strong { color:#6a0dad; display:block; margin-bottom:6px; font-size:1em; }
+.footnote-box li { margin-left:16px; margin-bottom:4px; }
+
+/* Y/N TOAST */
+.yn-toast { position:fixed; top:20%; left:50%; transform:translate(-50%,-50%); background:linear-gradient(135deg,#FFD700,#FFA500); color:#000; padding:16px 28px; border-radius:12px; font-family:'Arial Black',sans-serif; font-size:1em; font-weight:900; letter-spacing:1px; box-shadow:0 0 30px rgba(255,215,0,0.7); z-index:5000; opacity:0; transition:opacity 0.3s; pointer-events:none; text-align:center; }
+.yn-toast.show { opacity:1; }
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<!-- Input Modal -->
+<div class="yn-toast" id="ynToast">No lifeline needed — it's Yes or No! 🎸</div>
+<div class="input-modal-overlay" id="inputOverlay"></div>
+<div class="input-modal" id="inputModal">
+<h3 id="modalTitle">Enter Answer</h3>
+<div class="text-section" id="textSection">
+<input type="text" id="modalInput" placeholder="Type your answer..." />
+<div class="input-modal-buttons">
+<button onclick="saveModalAnswer()">Save</button>
+<button onclick="closeModal()" style="background:#6c757d;">Cancel</button>
+</div>
+<button class="mc-toggle-btn" id="mcToggleBtn" onclick="showMultipleChoice()">🎯 Multiple Choice (<span id="mcRemaining">3</span> left)</button>
+</div>
+<div class="mc-section" id="mcSection">
+<div id="mcOptions"></div>
+<button onclick="showTextEntry()" style="width:100%;margin-top:12px;background:#6c757d;padding:10px;font-size:0.9em;border:none;border-radius:8px;color:white;cursor:pointer;">✏️ Type My Own Answer</button>
+</div>
+</div>
+
+<!-- My Stats Modal -->
+<div class="stats-modal" id="statsModal" onclick="if(event.target===this) toggleStats()">
+<div class="stats-box">
+<h2>★ MY STATS ★</h2>
+<div class="stats-sub">PLAYER PROFILE</div>
+<div class="stat-row"><span class="stat-label">QUIZZES TODAY</span><span class="stat-value" id="statToday">0</span></div>
+<div class="stat-row"><span class="stat-label">TOTAL PLAYED</span><span class="stat-value" id="statTotal">0</span></div>
+<div class="stat-row"><span class="stat-label">CUMULATIVE SCORE</span><span class="stat-value" id="statCumulative">0%</span></div>
+<div class="stat-row"><span class="stat-label">BEST QUIZ SCORE</span><span class="stat-value" id="statBest">0/9</span></div>
+<div class="stat-row"><span class="stat-label">🔥 DAY STREAK</span><span class="stat-value" id="statStreak">0</span></div>
+<button class="stats-close" onclick="toggleStats()">CLOSE</button>
+</div>
+</div>
+
+<!-- Daily Limit Modal -->
+<div class="limit-modal" id="limitModal">
+<div class="limit-box">
+<h2>⚡ GAME OVER ⚡</h2>
+<p>You've maxed out your quizzes for today!<br><br>🎸 Come back tomorrow for more 80s glory! 🎸</p>
+<button onclick="document.getElementById('limitModal').classList.remove('show')">OK, SEE YOU TOMORROW!</button>
+</div>
+</div>
+
+<div class="container">
+<img src="https://raw.githubusercontent.com/80sGrid/80sgrid.github.io/main/images/header26.jpg" alt="80s Grid Header" class="logo-img">
+  <div style="text-align:center; margin:8px 0 16px; font-size:0.88em; font-family:Arial,sans-serif;">
+    <a href="about.html" style="color:#8B00FF; font-weight:bold; text-decoration:none; margin:0 12px;">About</a>
+    <span style="color:#ccc;">|</span>
+    <a href="sponsor.html" style="color:#8B00FF; font-weight:bold; text-decoration:none; margin:0 12px;">Sponsor</a>
+    <span style="color:#ccc;">|</span>
+    <a href="collaborate.html" style="color:#8B00FF; font-weight:bold; text-decoration:none; margin:0 12px;">Collaborate</a>
+  </div>
+<div class="tagline-sub">Big Hair. Bigger Hits. Better Quizzes.</div>
+
+<div class="how-to-play">
+<h2>How to Play</h2>
+<p>Match the artist (column) with the category (row). Click any box to type your answer. Multiple answers may work — get creative!</p>
+</div>
+
+<div class="page-nav">
+<a href="index.html" class="easy">1</a>
+<a href="quiz2.html" class="medium">2</a>
+<a href="quiz3.html" class="medium current">3</a>
+<a href="quiz4.html" class="hard">4</a>
+<a href="quiz5.html" class="medium">5</a>
+<a href="quiz6.html" class="medium">6</a>
+<a href="quiz7.html" class="easy">7</a>
+<a href="quiz8.html" class="medium">8</a>
+<a href="quiz9.html" class="easy">9</a>
+<a href="quiz10.html" class="medium">10</a>
+</div>
+<div class="page-nav">
+<a href="quiz11.html" class="hard">11</a>
+<a href="quiz12.html" class="medium">12</a>
+<a href="quiz13.html" class="medium">13</a>
+<a href="quiz14.html" class="medium">14</a>
+<a href="quiz15.html" class="hard">15</a>
+<a href="quiz16.html" class="easy">16</a>
+<a href="quiz17.html" class="medium">17</a>
+<a href="quiz18.html" class="hard">18</a>
+<a href="quiz19.html" class="easy">19</a>
+<a href="quiz20.html" class="hard">20</a>
+</div>
+<div class="nav-legend">🟢 Easy &nbsp;|&nbsp; 🟠 Medium &nbsp;|&nbsp; 🔴 Hard</div>
+
+<div class="difficulty-badge" style="--badge-color:#dc3545; --badge-glow:rgba(220,53,69,0.5);">
+<div class="badge-stars">★★★☆☆</div>
+<div class="badge-left">
+<div class="badge-label">Difficulty: MEDIUM-HARD</div>
+<div class="badge-score">Difficulty Score: 6/10</div>
+<div class="badge-desc">Deep cuts and trivia test your 80s knowledge</div>
+</div>
+</div>
+
+<div class="subtitle">Quiz 3</div>
+<div style="text-align:center; margin-top:-15px; margin-bottom:25px; font-size:1.3em; color:#667eea; font-family:Georgia, serif; font-style:italic; font-weight:bold; letter-spacing:1px;">Kings of 80s Alternative</div>
+
+<div style="text-align:center; margin-bottom:15px;">
+<div style="margin-bottom:8px;">
+<span id="playsCounter" style="color:#667eea; font-weight:bold; font-size:.9em;">🎮 Loading plays...</span>
+</div>
+<div>
+<a href="#" onclick="showLeaderboard(); return false;" style="color:#667eea; text-decoration:none; font-weight:bold; font-size:.9em;">Music Edition</a>
+<span style="margin:0 8px; color:#ccc;">|</span>
+<a href="#" onclick="toggleStats(); return false;" style="color:#667eea; text-decoration:none; font-weight:bold; font-size:.9em;">📊 My Stats</a>
+</div>
+</div>
+
+<!-- Lifeline Counter -->
+<div class="lifeline-bar" id="lifelineBar">
+<span class="lifeline-label">🎯 Lifelines</span>
+<div class="lifeline-pips">
+<div class="lifeline-pip" id="pip1">🎯</div>
+<div class="lifeline-pip" id="pip2">🎯</div>
+<div class="lifeline-pip" id="pip3">🎯</div>
+</div>
+<span class="lifeline-count" id="lifelineCount">3 remaining</span>
+</div>
+<div class="no-lifeline-badge" id="noLifelineBadge">🏆 No Lifelines Used — Pure 80s Knowledge!</div>
+<div class="grid">
+<div class="header" style="grid-row:1; grid-column:1; background:transparent;"></div>
+<div class="header col-header" style="grid-column:2;">The Police</div>
+<div class="header col-header" style="grid-column:3;">The Cure</div>
+<div class="header col-header" style="grid-column:4;">Depeche<br>Mode</div>
+
+<div class="header row-header" style="grid-row:2;">Lead Singer's First Name</div>
+<div class="cell" data-row="0" data-col="0"><input type="text" placeholder="Answer" readonly /></div>
+<div class="cell" data-row="0" data-col="1"><input type="text" placeholder="Answer" readonly /></div>
+<div class="cell" data-row="0" data-col="2"><input type="text" placeholder="Answer" readonly /></div>
+
+<div class="header row-header" style="grid-row:3;">Song with "Night" in Title</div>
+<div class="cell" data-row="1" data-col="0"><input type="text" placeholder="Answer" readonly /></div>
+<div class="cell" data-row="1" data-col="1"><input type="text" placeholder="Answer" readonly /></div>
+<div class="cell" data-row="1" data-col="2"><input type="text" placeholder="Answer" readonly /></div>
+
+<div class="header row-header" style="grid-row:4;">Played Sold Out Concert at Rose Bowl</div>
+<div class="cell" data-row="2" data-col="0"><input type="text" placeholder="Answer" readonly /></div>
+<div class="cell" data-row="2" data-col="1"><input type="text" placeholder="Answer" readonly /></div>
+<div class="cell" data-row="2" data-col="2"><input type="text" placeholder="Answer" readonly /></div>
+</div>
+
+<div style="background:#e3f2fd; border:1px solid #2196f3; padding:12px; border-radius:8px; margin-bottom:20px; text-align:center; font-size:.9em;">
+<strong>🚧 Beta Version</strong> — This game is still in testing. Please forgive any mistakes or inconsistencies. Your feedback is appreciated!
+</div>
+
+<div class="footnote-box">
+<strong>📝 Notes</strong>
+<ul>
+<li>The Police were only together for about 7 years (1977-1984) but became one of the biggest bands in the world — their "Synchronicity" album spent 17 weeks at #1 in the US.</li>
+<li>Depeche Mode started as a cheerful synth-pop band but gradually evolved into darker, moodier territory throughout the 80s — their sound transformation mirrors the decade itself.</li>
+<li>The Cure released six studio albums during the 1980s alone, ranging from dark post-punk to jangly pop — few bands explored such diverse sonic territory in a single decade.</li>
+<li>All three of these bands proved that "new wave" wasn't just a flash in the pan — they built lasting careers that extended far beyond the 80s into multiple decades of success.</li>
+</ul>
+</div>
+<div class="button-container">
+<button onclick="checkAnswers()">Check Answers</button>
+<button onclick="resetGrid()">Reset Grid</button>
+<button onclick="shareScore()" style="background:#FF1493;">📤 Share with a Friend</button>
+</div>
+
+<div id="results" style="display:none;">
+<div id="score" style="font-size:1.3em; font-weight:bold; color:#333; margin-bottom:15px;"></div>
+
+<div id="surveyQuestion" class="survey-question">
+<h3>💖 How much do you love 80s music? 💖</h3>
+<div class="survey-options">
+<div class="survey-option" onclick="selectSurvey(this,'A')">A. I love it</div>
+<div class="survey-option" onclick="selectSurvey(this,'B')">B. I love it so much</div>
+<div class="survey-option" onclick="selectSurvey(this,'C')">C. Oh my God, I love 80s music!</div>
+<div class="survey-option" onclick="selectSurvey(this,'D')">D. I worship Depeche Mode, Duran Duran and The Smiths</div>
+</div>
+</div>
+
+<a href="index.html" class="next-quiz-btn">🎸 PLAY QUIZ 1 AGAIN → 🎸</a>
+<div style="font-size:.95em; color:#555; margin-top:20px;">Brought to you by</div>
+<div style="font-size:1.1em; font-weight:bold; margin-bottom:5px;">
+<a href="https://arrivealivepodcast.com" target="_blank" style="color:#667eea; text-decoration:none;">The Arrive Alive Podcast</a>
+</div>
+<div style="font-size:.9em; color:#666; font-style:italic;">The Top Motorcycle Safety Podcast</div>
+</div>
+
+<div id="highScoreEntry" class="high-score-entry" style="display:none;">
+<h2>★ HIGH SCORE ★</h2>
+<p style="color:#00ff00; text-align:center; font-size:1.2em; margin-bottom:20px;">ENTER YOUR INITIALS</p>
+<div class="initials-input">
+<input type="text" maxlength="1" id="initial1" />
+<input type="text" maxlength="1" id="initial2" />
+<input type="text" maxlength="1" id="initial3" />
+</div>
+<div style="text-align:center; margin-top:20px;">
+<button class="arcade-button" onclick="saveHighScore()">SAVE</button>
+</div>
+</div>
+
+<div id="leaderboard" class="leaderboard" style="display:none;">
+<div class="leaderboard-scores-wrap">
+<div class="leaderboard-subtitle"></div>
+<div id="leaderboardList"></div>
+</div>
+</div>
+</div>
+
+<script>
+const QUIZ_NUM = 3;
+const PLAYS_KEY = '80sGridPlaysQuiz3';
+const SESSION_KEY = 'hasPlayedQuiz3';
+const QUIZ_KEY = 'quiz3Score';
+const DAILY_LIMIT = 3;
+const FAKE_SCORES = [
+    { initials: 'ACE', pct: 100, quizzes: 9, date: '2/1/26' },
+    { initials: 'MAX', pct: 96,  quizzes: 9, date: '2/3/26' },
+    { initials: 'ROX', pct: 93,  quizzes: 9, date: '2/5/26' },
+    { initials: 'JAX', pct: 89,  quizzes: 9, date: '2/8/26' },
+    { initials: 'ZEN', pct: 89,  quizzes: 5, date: '2/10/26' },
+    { initials: 'VIX', pct: 85,  quizzes: 9, date: '2/12/26' },
+    { initials: 'RAD', pct: 85,  quizzes: 4, date: '2/14/26' },
+    { initials: 'SKY', pct: 82,  quizzes: 9, date: '2/15/26' },
+    { initials: 'NEO', pct: 81,  quizzes: 5, date: '2/16/26' },
+    { initials: 'LUX', pct: 80,  quizzes: 9, date: '2/16/26' }
+];
+const SHARE_TEXT = "🎸 Test your 80s music knowledge! Play Len's 80sGrid.com Music Edition: https://80sgrid.com/";
+const PLAYS_START = 100;
+let currentCell = null;
+
+function getTodayKey() { return 'quizzesPlayed_' + new Date().toISOString().slice(0,10); }
+function getQuizzesPlayedToday() { return parseInt(localStorage.getItem(getTodayKey()) || '0'); }
+function incrementQuizzesPlayedToday() { const k=getTodayKey(); const n=getQuizzesPlayedToday()+1; localStorage.setItem(k,n); return n; }
+function loadStats() {
+  const today=getQuizzesPlayedToday();
+  const total=parseInt(localStorage.getItem('totalQuizzesPlayed')||'0');
+  let cum=0; for(let i=1;i<=10;i++) cum+=parseInt(localStorage.getItem('quiz'+i+'Score')||0);
+  const best=parseInt(localStorage.getItem('bestQuizScore')||'0');
+  const streak=parseInt(localStorage.getItem('playStreak')||'0');
+  document.getElementById('statToday').textContent=today+' / '+DAILY_LIMIT;
+  document.getElementById('statTotal').textContent=total;
+  document.getElementById('statCumulative').textContent=cum+'/90';
+  document.getElementById('statBest').textContent=best+'/9';
+  document.getElementById('statStreak').textContent=streak+' days';
+}
+function toggleStats() { loadStats(); document.getElementById('statsModal').classList.toggle('show'); }
+function updateStreak() {
+  const today=new Date().toISOString().slice(0,10);
+  const lastPlayed=localStorage.getItem('lastPlayedDate');
+  let streak=parseInt(localStorage.getItem('playStreak')||'0');
+  if(lastPlayed===today) return;
+  const yesterday=new Date(Date.now()-86400000).toISOString().slice(0,10);
+  streak=(lastPlayed===yesterday)?streak+1:1;
+  localStorage.setItem('playStreak',streak); localStorage.setItem('lastPlayedDate',today);
+}
+function initializeCells() { document.querySelectorAll('.cell').forEach(cell=>{ cell.addEventListener('click',()=>openModal(cell)); }); }
+function openModal(cell) {
+  currentCell=cell;
+  const colHeaders=['The Police','The Cure','Depeche Mode'];
+  const rowHeaders=["Lead Singer's First Name","Song with \"Night\" in Title","Played Sold Out Concert at Rose Bowl"];
+  document.getElementById('modalTitle').textContent=colHeaders[parseInt(cell.dataset.col)]+' \u2014 '+rowHeaders[parseInt(cell.dataset.row)];
+  document.getElementById('modalInput').value=cell.querySelector('input').value;
+  showTextEntry();
+  document.getElementById('inputModal').classList.add('active');
+  document.getElementById('inputOverlay').classList.add('active');
+  setTimeout(()=>document.getElementById('modalInput').focus(),100);
+}
+function closeModal() { document.getElementById('inputModal').classList.remove('active'); document.getElementById('inputOverlay').classList.remove('active'); currentCell=null; }
+function saveModalAnswer() {
+if (currentCell) {
+const modalValue = document.getElementById('modalInput').value;
+
+if (modalValue.toUpperCase() === 'RAD' && !radBonusUsed) {
+  radBonusUsed = true;
+  lifelinesRemaining++;
+  updateLifelineUI();
+  alert("Len's Bonus lifeline unlocked! 🛟");
+  document.getElementById('modalInput').value = '';
+  document.getElementById('modalInput').focus();
+  return;
+}
+const input = currentCell.querySelector('input');
+input.value = modalValue;
+closeModal();
+}
+}
+document.addEventListener('keypress',(e)=>{ if(e.key==='Enter'&&document.getElementById('inputModal').classList.contains('active')) saveModalAnswer(); });
+document.getElementById('inputOverlay').addEventListener('click',closeModal);
+
+const answers = {
+'0-0': ['sting','gordon'],
+'0-1': ['robert'],
+'0-2': ['dave'],
+'1-0': ['bring on the night'],
+'1-1': ['1015 saturday night','10 15 saturday night','saturday night'],
+'1-2': ['waiting for the night to fall'],
+'2-0': ['no'],
+'2-1': ['yes'],
+'2-2': ['yes']
+};
+
+const mcOptions = {
+  "0-0": ["Sting", "Stewart", "Andy"],
+  "0-1": ["Robert", "Roger", "Roland"],
+  "0-2": ["Dave", "Stephen", "Philip"],
+  "1-0": ["Bring on the Night", "Walking on the Moon", "Message in a Bottle"],
+  "1-1": ["10:15 Saturday Night", "Friday I'm in Love", "Boys Don't Cry"],
+  "1-2": ["Waiting for the Night to Fall", "Enjoy the Silence", "Personal Jesus"]
+};
+
+let lifelinesRemaining = 3;
+let radBonusUsed = false;
+function updateLifelineUI() {
+  for (let i = 1; i <= 3; i++) {
+    const pip = document.getElementById('pip' + i);
+    if (i <= lifelinesRemaining) { pip.classList.remove('used'); pip.textContent = '🎯'; }
+    else { pip.classList.add('used'); pip.textContent = ''; }
+  }
+  const countEl = document.getElementById('lifelineCount');
+  const btnEl = document.getElementById('mcToggleBtn');
+  const remainEl = document.getElementById('mcRemaining');
+  if (remainEl) remainEl.textContent = lifelinesRemaining;
+  if (lifelinesRemaining === 0) {
+    countEl.textContent = 'None left!'; countEl.classList.add('empty');
+    if (btnEl) { btnEl.disabled = true; btnEl.title = 'No lifelines remaining'; }
+  } else {
+    countEl.textContent = lifelinesRemaining + ' remaining'; countEl.classList.remove('empty');
+    if (btnEl) { btnEl.disabled = false; btnEl.title = ''; }
+  }
+}
+function showMultipleChoice() {
+  if (lifelinesRemaining <= 0) return;
+  const key = currentCell.dataset.row + '-' + currentCell.dataset.col;
+  const yesNoKeys = ['2-0', '2-1', '2-2'];
+  if (yesNoKeys.includes(key)) {
+    const toast = document.getElementById('ynToast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+    return;
+  }
+  const opts = [...mcOptions[key]];
+  for (let i = opts.length - 1; i > 0; i--) { const j = Math.floor(Math.random()*(i+1)); [opts[i],opts[j]]=[opts[j],opts[i]]; }
+  const container = document.getElementById('mcOptions');
+  container.innerHTML = '';
+  opts.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'mc-option'; btn.textContent = opt;
+    btn.onclick = () => selectMCOption(opt);
+    container.appendChild(btn);
+  });
+  document.getElementById('textSection').classList.add('hidden');
+  document.getElementById('mcSection').classList.add('visible');
+}
+function showTextEntry() {
+  document.getElementById('textSection').classList.remove('hidden');
+  document.getElementById('mcSection').classList.remove('visible');
+  setTimeout(() => document.getElementById('modalInput').focus(), 60);
+}
+function selectMCOption(value) {
+  if (currentCell) {
+    currentCell.querySelector('input').value = value;
+    lifelinesRemaining = Math.max(0, lifelinesRemaining - 1);
+    updateLifelineUI(); closeModal();
+  }
+}
+function normalizeString(str) { return str.toLowerCase().replace(/[\u2018\u2019']/g,'').replace(/[^a-z0-9\s]/g,'').replace(/\s+/g,' ').trim(); }
+function checkAnswers() {
+  if(getQuizzesPlayedToday()>=DAILY_LIMIT){ document.getElementById('limitModal').classList.add('show'); return; }
+  const cells=document.querySelectorAll('.cell'); let correct=0,total=0;
+  cells.forEach(cell=>{
+    const input=cell.querySelector('input'); const userAnswer=normalizeString(input.value);
+    const key=cell.dataset.row+'-'+cell.dataset.col;
+    if(userAnswer){ total++;
+      const valid=answers[key].map(a=>normalizeString(a));
+      if(valid.some(a=>userAnswer===a||userAnswer.includes(a)||a.includes(userAnswer))){ cell.classList.add('correct'); cell.classList.remove('incorrect'); correct++; }
+      else{ cell.classList.add('incorrect'); cell.classList.remove('correct'); }
+    }
+  });
+  if(total===0){ alert('Fill in some answers first!'); return; }
+  if(!sessionStorage.getItem(SESSION_KEY)){
+    let plays=(parseInt(localStorage.getItem(PLAYS_KEY)) || PLAYS_START); plays++;
+    localStorage.setItem(PLAYS_KEY,plays); updatePlaysCounter(); sessionStorage.setItem(SESSION_KEY,'true');
+    incrementQuizzesPlayedToday();
+    const tot=parseInt(localStorage.getItem('totalQuizzesPlayed')||'0')+1; localStorage.setItem('totalQuizzesPlayed',tot);
+    updateStreak();
+    const best=parseInt(localStorage.getItem('bestQuizScore')||'0'); if(correct>best) localStorage.setItem('bestQuizScore',correct);
+  }
+  localStorage.setItem(QUIZ_KEY,correct);
+  document.getElementById('score').textContent='You got '+correct+' out of '+total+' correct!';
+  document.getElementById('results').style.display='block';
+  if(correct>=8&&total===9) setTimeout(()=>{ document.getElementById('highScoreEntry').style.display='block'; document.getElementById('initial1').focus(); },1000);
+  displayLeaderboard();
+}
+function updatePlaysCounter() { let plays=(parseInt(localStorage.getItem(PLAYS_KEY)) || PLAYS_START); document.getElementById('playsCounter').textContent='🎮 '+plays.toLocaleString()+' plays'; }
+function showLeaderboard() { displayLeaderboard(); document.getElementById('leaderboard').scrollIntoView({behavior:'smooth'}); }
+function shareScore() { if(navigator.share){ navigator.share({title:"Len's 80sGrid.com",text:SHARE_TEXT}).catch(()=>{}); } else{ navigator.clipboard.writeText(SHARE_TEXT).then(()=>{alert('Link copied!');}).catch(()=>{alert(SHARE_TEXT);}); } }
+function resetGrid() { document.querySelectorAll('.cell input').forEach(i=>{ i.value=''; i.parentElement.classList.remove('correct','incorrect'); }); document.getElementById('results').style.display='none'; document.getElementById('highScoreEntry').style.display='none'; }
+function saveHighScore() {
+  const i1=document.getElementById('initial1').value.toUpperCase();
+  const i2=document.getElementById('initial2').value.toUpperCase();
+  const i3=document.getElementById('initial3').value.toUpperCase();
+  if(!i1||!i2||!i3){ alert('Please enter all 3 initials!'); return; }
+  let totalCorrect=0; let quizzesPlayed=0;
+  for(let i=1;i<=10;i++){ const s=parseInt(localStorage.getItem('quiz'+i+'Score')||0); totalCorrect+=s; if(s>0) quizzesPlayed++; }
+  const possible=quizzesPlayed*9; const pct=possible>0?Math.round((totalCorrect/possible)*100):0;
+  if(pct>=80){
+    let scores=JSON.parse(localStorage.getItem('80sGridScoresCombined')||'[]');
+    scores.push({initials:i1+i2+i3,pct:pct,quizzes:quizzesPlayed,date:new Date().toLocaleDateString('en-US',{month:'numeric',day:'numeric',year:'2-digit'})});
+    scores.sort((a,b)=>b.pct-a.pct); scores=scores.slice(0,10);
+    localStorage.setItem('80sGridScoresCombined',JSON.stringify(scores));
+  }
+  document.getElementById('highScoreEntry').style.display='none'; displayLeaderboard();
+}
+function displayLeaderboard() {
+  let scores=JSON.parse(localStorage.getItem('80sGridScoresCombined')||'[]');
+  if(scores.length<10) scores=[...scores,...FAKE_SCORES].slice(0,10);
+  scores.sort((a,b)=>b.pct-a.pct);
+  const html=scores.map((s,i)=>'<div class="leaderboard-item"><span class="leaderboard-rank">'+String(i+1).padStart(2,'0')+'.</span><span class="leaderboard-initials">'+s.initials+'</span><span class="leaderboard-score">'+s.pct+'%</span><span class="leaderboard-date">'+s.date+'</span></div>').join('');
+  document.getElementById('leaderboardList').innerHTML=html;
+  document.getElementById('leaderboard').style.display='block';
+}
+document.getElementById('initial1').addEventListener('input',function(){ if(this.value) document.getElementById('initial2').focus(); });
+document.getElementById('initial2').addEventListener('input',function(){ if(this.value) document.getElementById('initial3').focus(); });
+document.getElementById('initial3').addEventListener('keypress',function(e){ if(e.key==='Enter') saveHighScore(); });
+document.addEventListener('DOMContentLoaded',()=>{
+  initializeCells(); updatePlaysCounter(); displayLeaderboard();
+});
+</script>
+</body>
+</html>
