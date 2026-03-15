@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+// Set base URL dynamically so all relative paths work regardless of subdirectory
+(function(){
+  var base = document.createElement('base');
+  var path = window.location.pathname.replace(/\/[^\/]*$/, '/');
+  base.href = window.location.origin + path;
+  document.head.insertBefore(base, document.head.firstChild);
+})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FE9N3JWSGN"></script>
