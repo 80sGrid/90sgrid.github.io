@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-// Set base URL dynamically so all relative paths work regardless of subdirectory
-(function(){
-  var base = document.createElement('base');
-  var path = window.location.pathname.replace(/\/[^\/]*$/, '/');
-  base.href = window.location.origin + path;
-  document.head.insertBefore(base, document.head.firstChild);
-})();
-</script>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base id="baseTag" href=""><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FE9N3JWSGN"></script>
-<script src="analytics.js"></script>
-<script src="quiz-data.js"></script>
-<title id="pageTitle">Lens 80sGrid.com Music Edition</title>
+<script src="https://80sgrid.github.io/90sgrid.github.io/analytics.js"></script>
+<script src="https://80sgrid.github.io/90sgrid.github.io/quiz-data.js"></script>
+<title>Len's 80sGrid.com Music Edition - Quiz 41</title>
 <meta property="og:type" content="website">
-<meta id="ogUrl" property="og:url" content="">
-<meta id="ogTitle" property="og:title" content="">
-<meta id="ogDesc" property="og:description" content="">
+<meta property="og:url" content="https://80sgrid.com/quiz41.html">
+<meta property="og:title" content="Len's 80sGrid.com Music Edition - Quiz 41">
+<meta property="og:description" content="Match Van Halen, Def Leppard, and AC/DC to singers, albums, and Hall of Fame status">
 <meta property="og:image" content="https://raw.githubusercontent.com/80sGrid/80sgrid.github.io/main/images/header26.jpg">
 <meta property="twitter:card" content="summary_large_image">
-
-<meta id="twTitle" property="twitter:title" content="">
-<meta id="twDesc" property="twitter:description" content="">
+<meta property="twitter:url" content="https://80sgrid.com/quiz41.html">
+<meta property="twitter:title" content="Len's 80sGrid.com Music Edition - Quiz 41">
+<meta property="twitter:description" content="Match Van Halen, Def Leppard, and AC/DC to singers, albums, and Hall of Fame status">
 <meta property="twitter:image" content="https://raw.githubusercontent.com/80sGrid/80sgrid.github.io/main/images/header26.jpg">
 <style>
 body {
@@ -464,7 +455,6 @@ min-height: 300px; width: 100%; box-sizing: border-box;
   </div>
 </div>
 
-
 <div class="container">
 <img src="https://raw.githubusercontent.com/80sGrid/80sgrid.github.io/main/images/header26.jpg" alt="80s Grid Header" class="logo-img">
 <div class="mini-nav">
@@ -507,15 +497,15 @@ min-height: 300px; width: 100%; box-sizing: border-box;
 </div>
 <div class="nav-replay-note">&#10003; Completed quizzes can be replayed anytime &mdash; they won&rsquo;t use a play.</div>
 <div class="difficulty-badge" id="difficultyBadge" style="--badge-color:#fd7e14; --badge-glow:rgba(253,126,20,0.5);">
-<div class="badge-stars" id="badgeStars"></div>
+<div class="badge-stars" id="badgeStars">&#9733;&#9733;&#9733;&#9734;&#9734;</div>
 <div class="badge-left">
 <div class="badge-label" id="badgeLabel">Difficulty: MEDIUM</div>
-<div class="badge-score" id="badgeScore">Difficulty Score: 5/10</div>
-<div class="badge-desc" id="badgeDesc"></div>
+<div class="badge-score" id="badgeScore">Difficulty Score: 6/10</div>
+<div class="badge-desc" id="badgeDesc">Ska-punk family tree knowledge required</div>
 </div>
 </div>
-<div class="subtitle" id="quizSubtitle">Quiz</div>
-<div id="artistSubtitle" style="text-align:center; margin-top:-15px; margin-bottom:25px; font-size:1.3em; color:#667eea; font-family:Georgia, serif; font-style:italic; font-weight:bold; letter-spacing:1px;"></div>
+<div class="subtitle" id="quizSubtitle">Quiz 41</div>
+<div id="artistSubtitle" style="text-align:center; margin-top:-15px; margin-bottom:25px; font-size:1.3em; color:#667eea; font-family:Georgia, serif; font-style:italic; font-weight:bold; letter-spacing:1px;">Van Halen, Def Leppard &amp; AC/DC</div>
 <div style="text-align:center; margin-bottom:15px;">
 <div style="margin-bottom:8px;">
 <span id="playsCounter" style="color:#667eea; font-weight:bold; font-size:.9em;">&#127918; Loading plays...</span>
@@ -574,15 +564,17 @@ min-height: 300px; width: 100%; box-sizing: border-box;
 <div class="no-lifeline-badge" id="noLifelineBadge">&#127942; No Lifelines Used — Pure 80s Knowledge!</div>
 <div class="grid">
 <div class="header" style="grid-row:1; grid-column:1; background:transparent;"></div>
-<div class="header col-header" id="colH1" style="grid-column:2;"></div><div class="header col-header" id="colH2" style="grid-column:3;"></div><div class="header col-header" id="colH3" style="grid-column:4;"></div>
-<div class="header row-header" id="rowH1" style="grid-row:2;"></div><div class="header row-header" id="rowH2" style="grid-row:3;"></div><div class="header row-header" style="grid-row:4;">Rock N' Roll<br>Hall of Fame<br>(Yes or No)</div>
-<div class="cell" data-row="0" data-col="0"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="0" data-col="1"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="0" data-col="2"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="1" data-col="0"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="1" data-col="1"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="1" data-col="2"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="2" data-col="0"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="2" data-col="1"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="2" data-col="2"><input type="text" placeholder="Answer" readonly /></div>
+<div class="header col-header" id="colH1" style="grid-column:2;">Van Halen</div><div class="header col-header" id="colH2" style="grid-column:3;">Def<br>Leppard</div><div class="header col-header" id="colH3" style="grid-column:4;">AC/DC</div>
+<div class="header row-header" id="rowH1" style="grid-row:2;">Number of<br>Lead Singers</div><div class="header row-header" id="rowH2" style="grid-row:3;">Highest Charting<br>U.S. 80s Album</div><div class="header row-header" id="rowH3" style="grid-row:4;">Rock Hall of Fame</div>
+<div class="cell" data-row="0" data-col="0"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="0" data-col="1"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="0" data-col="2"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="1" data-col="0"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="1" data-col="1"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="1" data-col="2"><input type="text" placeholder="Answer" readonly /></div><div class="cell" data-row="2" data-col="0"><input type="text" placeholder="Yes or No?" readonly /></div><div class="cell" data-row="2" data-col="1"><input type="text" placeholder="Yes or No?" readonly /></div><div class="cell" data-row="2" data-col="2"><input type="text" placeholder="Yes or No?" readonly /></div>
 
 </div>
 <div class="button-container">
 <button onclick="checkAnswers()">Check Answers</button>
 <button onclick="resetGrid()">Reset Grid</button>
 </div>
+
+<!-- DEDICATION BOX - randomly rotated on every page load -->
 <div id="dedicationAnchor"></div>
 <div id="results" style="display:none;">
 <div id="score" style="font-size:1.3em; font-weight:bold; color:#333; margin-bottom:15px;"></div>
@@ -608,10 +600,10 @@ min-height: 300px; width: 100%; box-sizing: border-box;
   </button>
 </div>
 <div style="margin-bottom:10px;">
-<a id="replayBtn" href="#" class="replay-btn">Play Again <span class="hint">(doesn't count toward daily limit)</span></a>
+<a id="replayBtn" href="quiz41.html" class="replay-btn">&#128260; Play Quiz 41 Again <span class="hint">(doesn't count toward daily limit)</span></a>
 </div>
 <div id="postNextQuiz">
-<a id="nextQuizBtn" href="#" class="next-quiz-btn">NEXT QUIZ</a>
+<a id="nextQuizBtn" href="quiz42.html" class="next-quiz-btn">&#127928; PLAY QUIZ 42 &#8594; &#127928;</a>
 </div>
 <div class="post-quiz-wrap" id="postWrapBox" style="display:none;">
 <div style="font-size:1.5em; margin-bottom:6px;">&#127926;</div>
@@ -638,7 +630,9 @@ min-height: 300px; width: 100%; box-sizing: border-box;
 <strong>&#128679; Beta Version</strong> — This game is still in testing. Please forgive any mistakes or inconsistencies. Your feedback is appreciated!
 </div>
 <div class="footnote-box">
-<strong>&#128221; Notes</strong><div id="quizNotes"></div></div>
+<strong>&#128221; Notes</strong>
+<div id="quizNotes"></div>
+</div>
 <div id="highScoreEntry" class="high-score-entry" style="display:none;">
 <h2>&#9733; HIGH SCORE &#9733;</h2>
 <p style="color:#00ff00; text-align:center; font-size:1.2em; margin-bottom:20px;">ENTER YOUR INITIALS</p>
@@ -752,22 +746,13 @@ min-height: 300px; width: 100%; box-sizing: border-box;
   </div>
 </div>
 
-</body>
-</html>
-
 <script>
-// ============================================================
-// 80sGrid TEMPLATE ENGINE v2.0
-// One file + quiz-data.js serves all quizzes
-// Update nav/UI: edit this file once
-// Add/edit quiz: edit quiz-data.js only
-// ============================================================
+// 80sGrid Template Engine v2.0
+(function(){var b=document.getElementById('baseTag');if(b){var p=window.location.pathname.replace(/\/[^\/]*$/,'/');b.href=window.location.origin+p;}})();
 
 function getQuizNumFromURL(){
-  // Check sessionStorage first (set by stub file redirect)
   var ssn=sessionStorage.getItem('80sGrid_quizNum');
   if(ssn){sessionStorage.removeItem('80sGrid_quizNum');return parseInt(ssn);}
-  // Direct URL detection (for bookmarks, sharing, direct links)
   var path=window.location.pathname;
   if(path==='/'||/index\.html?$/i.test(path)) return 1;
   var m=path.match(/quiz(\d+)\.html?/i);
@@ -776,36 +761,29 @@ function getQuizNumFromURL(){
   if(p.get('q')) return parseInt(p.get('q'));
   return 1;
 }
-
 const QUIZ_NUM=getQuizNumFromURL();
 const Q=QUIZ_DATA[QUIZ_NUM];
-if(!Q){document.body.innerHTML='<div style="padding:60px;text-align:center;font-family:Arial"><h2>Quiz '+QUIZ_NUM+' coming soon!</h2><p><a href="/">Back to Quiz 1</a></p></div>';throw new Error('Quiz '+QUIZ_NUM+' not in QUIZ_DATA');}
-
+if(!Q){document.body.innerHTML='<div style="padding:60px;text-align:center;font-family:Arial"><h2>Quiz '+QUIZ_NUM+' coming soon!</h2><p><a href="index.html">Back to Quiz 1</a></p></div>';throw new Error('Quiz not found');}
 const PLAYS_KEY='80sGridPlaysQuiz'+QUIZ_NUM;
 const SESSION_KEY='hasPlayedQuiz'+QUIZ_NUM;
 const QUIZ_KEY='quiz'+QUIZ_NUM+'Score';
 const DAILY_LIMIT=2;
 const FORMSPREE_URL='https://formspree.io/f/xqedyjjd';
+const FEEDBACK_FORMSPREE='https://formspree.io/f/xeelpozw';
 const SECRET_CODES={LEN:'bonus',MAGIC:'unlimited',RAD:'bonus'};
+const FAKE_SCORES=[{initials:'ACE',pct:100,quizzes:9,date:'2/1/26'},{initials:'MAX',pct:96,quizzes:9,date:'2/3/26'},{initials:'ROX',pct:93,quizzes:9,date:'2/5/26'},{initials:'JAX',pct:89,quizzes:9,date:'2/8/26'},{initials:'ZEN',pct:89,quizzes:5,date:'2/10/26'},{initials:'VIX',pct:85,quizzes:9,date:'2/12/26'},{initials:'RAD',pct:85,quizzes:4,date:'2/14/26'},{initials:'SKY',pct:82,quizzes:9,date:'2/15/26'},{initials:'NEO',pct:81,quizzes:5,date:'2/16/26'},{initials:'LUX',pct:80,quizzes:9,date:'2/16/26'}];
 const PLAYS_START=100;
 const yesNoKeys=Q.yesNoKeys||[];
 const answers=Q.answers;
 const mcOptions=Q.mcOptions||{};
-const FAKE_SCORES=[{initials:'ACE',pct:100,quizzes:9,date:'2/1/26'},{initials:'MAX',pct:96,quizzes:9,date:'2/3/26'},{initials:'ROX',pct:93,quizzes:9,date:'2/5/26'},{initials:'JAX',pct:89,quizzes:9,date:'2/8/26'},{initials:'ZEN',pct:89,quizzes:5,date:'2/10/26'},{initials:'VIX',pct:85,quizzes:9,date:'2/12/26'},{initials:'RAD',pct:85,quizzes:4,date:'2/14/26'},{initials:'SKY',pct:82,quizzes:9,date:'2/15/26'},{initials:'NEO',pct:81,quizzes:5,date:'2/16/26'},{initials:'LUX',pct:80,quizzes:9,date:'2/16/26'}];
-
-const SHARE_TEXT_BASE='\uD83C\uDFB8 Test your 80s knowledge! Quiz '+QUIZ_NUM+' \u2014 '+Q.subtitle+'. Play Len\'s 80sGrid.com: https://80sgrid.com/quiz'+QUIZ_NUM+'.html';
-function getShareText(score){if(score!==undefined&&score!==null){return '\uD83C\uDFB8 I scored '+score+'/9 on Quiz '+QUIZ_NUM+' \u2014 '+Q.subtitle+'! Can you beat me? https://80sgrid.com/quiz'+QUIZ_NUM+'.html';}return SHARE_TEXT_BASE;}
+const SHARE_TEXT_BASE='\uD83C\uDFB8 Quiz '+QUIZ_NUM+' \u2014 '+Q.subtitle+'. https://80sgrid.com/quiz'+QUIZ_NUM+'.html';
+function getShareText(s){return s!=null?'\uD83C\uDFB8 I scored '+s+'/9 on Quiz '+QUIZ_NUM+'! https://80sgrid.com/quiz'+QUIZ_NUM+'.html':SHARE_TEXT_BASE;}
 function getShareCardTitle(){return 'QUIZ '+QUIZ_NUM;}
 function getShareCardArtists(){return Q.subtitle.replace(/&amp;/g,'&').toUpperCase();}
 
 function initQuizPage(){
   var n=QUIZ_NUM,q=Q;
-  document.getElementById('pageTitle').textContent='Len\'s 80sGrid.com Music Edition - Quiz '+n;
-  document.getElementById('ogUrl').setAttribute('content','https://80sgrid.com/quiz'+n+'.html');
-  document.getElementById('ogTitle').setAttribute('content','Len\'s 80sGrid.com Music Edition - Quiz '+n);
-  document.getElementById('ogDesc').setAttribute('content',q.diff_desc);
-  document.getElementById('twTitle').setAttribute('content','Len\'s 80sGrid.com Music Edition - Quiz '+n);
-  document.getElementById('twDesc').setAttribute('content',q.diff_desc);
+  document.title='Len\'s 80sGrid.com - Quiz '+n;
   document.getElementById('difficultyBadge').setAttribute('style','--badge-color:'+q.diff_color+'; --badge-glow:'+q.diff_glow+';');
   document.getElementById('badgeStars').innerHTML=q.diff_stars;
   document.getElementById('badgeLabel').textContent='Difficulty: '+q.difficulty;
@@ -823,9 +801,9 @@ function initQuizPage(){
   var rb=document.getElementById('replayBtn');
   if(rb){rb.href='quiz'+n+'.html';rb.innerHTML='&#128260; Play Quiz '+n+' Again <span class="hint">(doesn\'t count toward daily limit)</span>';}
   var nb=document.getElementById('nextQuizBtn');
-  if(nb){var nx=n+1;nb.href=nx===1?'index.html':'quiz'+nx+'.html';nb.innerHTML='&#127928; PLAY QUIZ '+nx+' &#8594; &#127928;';}
-  var ftag=document.querySelector('.feedback-quiz-tag');
-  if(ftag) ftag.textContent='&#127918; Currently playing: Quiz '+n;
+  if(nb){var nx=n+1;nb.href='quiz'+nx+'.html';nb.innerHTML='&#127928; PLAY QUIZ '+nx+' &#8594; &#127928;';}
+  var ft=document.querySelector('.feedback-quiz-tag');
+  if(ft) ft.textContent='&#127918; Currently playing: Quiz '+n;
   document.querySelectorAll('.cell').forEach(function(c){var k=c.dataset.row+'-'+c.dataset.col;c.querySelector('input').placeholder=yesNoKeys.includes(k)?'Yes or No?':'Answer';});
 }
 
@@ -838,566 +816,18 @@ function openModal(cell){
   document.getElementById('modalInput').value=cell.querySelector('input').value;
   document.getElementById('textSection').style.display='block';
   showTextEntry();
-  var mb=document.getElementById('mcToggleBtn');
-  if(mb) mb.style.display=Object.keys(mcOptions).length===0?'none':'block';
+  var mb=document.getElementById('mcToggleBtn');if(mb)mb.style.display=Object.keys(mcOptions).length===0?'none':'block';
   document.getElementById('inputModal').classList.add('active');
   document.getElementById('inputOverlay').classList.add('active');
   setTimeout(function(){document.getElementById('modalInput').focus();},100);
 }
 
-function getTodayKey(){return 'quizzesPlayed_'+new Date().toISOString().slice(0,10);}
-function getQuizzesPlayedToday(){return parseInt(localStorage.getItem(getTodayKey())||'0');}
-function incrementQuizzesPlayedToday(){const k=getTodayKey();const n=getQuizzesPlayedToday()+1;localStorage.setItem(k,n);return n;}
-function getBonusKey(){return 'bonusUnlock_'+new Date().toISOString().slice(0,10);}
-function getUnlockType(){return localStorage.getItem(getBonusKey())||null;}
-function setUnlockType(type){localStorage.setItem(getBonusKey(),type);}
-function getEffectiveDailyLimit(){const u=getUnlockType();if(u==='unlimited')return 999;if(u==='bonus')return DAILY_LIMIT+1;return DAILY_LIMIT;}
-function hasNewPlaysLeft(){return getUnlockType()==='unlimited'||getQuizzesPlayedToday()<getEffectiveDailyLimit();}
-
-/* ===== STATS ===== */
-function loadStats(){
-  const today=getQuizzesPlayedToday();const limit=getEffectiveDailyLimit();
-  const total=parseInt(localStorage.getItem('totalQuizzesPlayed')||'0');
-  let cum=0;for(let i=1;i<=40;i++)cum+=parseInt(localStorage.getItem('quiz'+i+'Score')||0);
-  const best=parseInt(localStorage.getItem('bestQuizScore')||'0');
-  const streak=parseInt(localStorage.getItem('playStreak')||'0');
-  document.getElementById('statToday').textContent=today+' / '+(limit>900?'∞':limit);
-  document.getElementById('statTotal').textContent=total;
-  document.getElementById('statCumulative').textContent=cum+'/324';
-  document.getElementById('statBest').textContent=best+'/9';
-  document.getElementById('statStreak').textContent=streak+' days';
-}
-function toggleStats(){loadStats();document.getElementById('statsModal').classList.toggle('show');}
-function updateStreak(){
-  const today=new Date().toISOString().slice(0,10);
-  const lastPlayed=localStorage.getItem('lastPlayedDate');
-  let streak=parseInt(localStorage.getItem('playStreak')||'0');
-  if(lastPlayed===today)return;
-  const yesterday=new Date(Date.now()-86400000).toISOString().slice(0,10);
-  streak=(lastPlayed===yesterday)?streak+1:1;
-  localStorage.setItem('playStreak',streak);localStorage.setItem('lastPlayedDate',today);
-}
-
-/* ===== POST-QUIZ UI ===== */
-function updatePostQuizUI(){
-  const played=getQuizzesPlayedToday();const unlock=getUnlockType();const limit=getEffectiveDailyLimit();
-  const isUnlimited=unlock==='unlimited';const playsLeft=isUnlimited?999:limit-played;
-  const progressEl=document.getElementById('postQuizProgress');const unlimitedEl=document.getElementById('postUnlimitedBanner');
-  if(isUnlimited){progressEl.style.display='none';unlimitedEl.style.display='block';}
-  else{
-    progressEl.style.display='block';unlimitedEl.style.display='none';
-    let pipsHTML='';for(let i=0;i<limit;i++)pipsHTML+='<div class="progress-pip '+(i<played?'filled':'empty')+'"></div>';
-    document.getElementById('postProgressPips').innerHTML=pipsHTML;
-    let text;if(playsLeft>0){text='You\'ve played <strong style="color:#8B00FF;">'+played+'</strong> of your <strong style="color:#FF1493;">'+limit+'</strong> new quizzes today.';text+=playsLeft===1?' You\'ve got <strong style="color:#28a745;">1 new quiz</strong> left!':' You\'ve got <strong style="color:#28a745;">'+playsLeft+' new quizzes</strong> left!';}
-    else{text='You\'ve played all <strong style="color:#FF1493;">'+limit+'</strong> new quizzes for today! &#127881;';}
-    document.getElementById('postProgressText').innerHTML=text;
-  }
-  const nextQuizEl=document.getElementById('postNextQuiz');const wrapEl=document.getElementById('postWrapBox');
-  if(playsLeft>0||isUnlimited){nextQuizEl.style.display='block';wrapEl.style.display='none';}
-  else{nextQuizEl.style.display='none';wrapEl.style.display='block';if(unlock){document.getElementById('bonusCodeBox').style.display='none';showBonusSuccess(unlock);}}
-}
-
-/* ===== EMAIL / CODE HELPERS ===== */
-function isEmail(str){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str.trim());}
-async function submitEmailToFormspree(email){
-  try{await fetch(FORMSPREE_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:email.trim(),quiz:'Quiz '+QUIZ_NUM,date:new Date().toISOString()})});}catch(e){}
-}
-function showBonusSuccess(type){
-  const el=document.getElementById('bonusSuccess');const titleEl=document.getElementById('bonusSuccessTitle');const textEl=document.getElementById('bonusSuccessText');
-  el.style.display='block';
-  if(type==='unlimited'){el.className='bonus-success unlimited-type';titleEl.style.color='#FFA500';titleEl.textContent='UNLIMITED MODE ACTIVATED!';textEl.textContent='All quizzes unlocked. Play as many as you want!';}
-  else{el.className='bonus-success bonus-type';titleEl.style.color='#28a745';titleEl.textContent='BONUS QUIZ UNLOCKED!';textEl.textContent='You unlocked 1 bonus quiz today!';}
-}
-
-/* ===== WRAP BOX (post-quiz limit reached) ===== */
-async function submitWrapCode(){
-  const input=document.getElementById('bonusInput').value.trim();const upper=input.toUpperCase();
-  const errorEl=document.getElementById('bonusError');const submitBtn=document.getElementById('bonusSubmitBtn');
-  if(SECRET_CODES[upper]){setUnlockType(SECRET_CODES[upper]);errorEl.style.display='none';document.getElementById('bonusCodeBox').style.display='none';showBonusSuccess(SECRET_CODES[upper]);updatePostQuizUI();try{gtag('event','bonus_unlocked',{quiz_number:QUIZ_NUM,method:'secret_code',type:SECRET_CODES[upper]});}catch(e){}}
-  else if(isEmail(input)){submitBtn.textContent='...';submitBtn.style.opacity='0.6';await submitEmailToFormspree(input);submitBtn.textContent='ENTER';submitBtn.style.opacity='1';setUnlockType('bonus');errorEl.style.display='none';document.getElementById('bonusCodeBox').style.display='none';showBonusSuccess('bonus');updatePostQuizUI();try{gtag('event','bonus_unlocked',{quiz_number:QUIZ_NUM,method:'email',type:'bonus'});}catch(e){}}
-  else{errorEl.style.display='block';}
-}
-
-/* ===== UNLOCK PANEL (nav status bar) ===== */
-function submitUnlockCode(){
-  const input=document.getElementById('unlockCodeInput').value.trim();const upper=input.toUpperCase();
-  if(SECRET_CODES[upper]){
-    setUnlockType(SECRET_CODES[upper]);
-    document.getElementById('unlockCodeInput').value='';
-    document.getElementById('unlockSuccess').style.display='block';
-    document.getElementById('unlockSuccessEmoji').textContent=SECRET_CODES[upper]==='unlimited'?'\u267e\ufe0f':'\ud83c\udf89';
-    document.getElementById('unlockSuccessText').textContent=SECRET_CODES[upper]==='unlimited'?'UNLIMITED MODE — All quizzes unlocked!':'Bonus quiz unlocked!';
-    updateNavStatus();
-  } else if(input){alert('Invalid code. Try again!');}
-}
-function toggleUnlockEmail(){
-  var el=document.getElementById('unlockEmailExpand');
-  el.style.display=el.style.display==='block'?'none':'block';
-}
-function submitUnlockEmail(){
-  var email=document.getElementById('unlockEmailInput').value.trim();
-  if(!isEmail(email)){alert('Please enter a valid email.');return;}
-  submitEmailToFormspree(email);
-  setUnlockType('bonus');
-  document.getElementById('unlockEmailExpand').style.display='none';
-  document.getElementById('unlockSuccess').style.display='block';
-  document.getElementById('unlockSuccessEmoji').textContent='\ud83c\udf89';
-  document.getElementById('unlockSuccessText').textContent='Bonus quiz unlocked!';
-  updateNavStatus();
-}
-
-/* ===== GRID / MODAL ===== */
-function initializeCells(){
-  document.querySelectorAll('.cell').forEach(cell=>{
-    const key=cell.dataset.row+'-'+cell.dataset.col;
-    cell.querySelector('input').placeholder=yesNoKeys.includes(key)?'Y/N':'Answer';
-    cell.addEventListener('click',()=>openModal(cell));
-  });
-}
-function openModal(cell){
-  const previousScore=parseInt(localStorage.getItem(QUIZ_KEY)||'0');
-  if(previousScore===0&&!hasNewPlaysLeft()){document.getElementById('limitModal').classList.add('show');return;}
-  currentCell=cell;
-  const colHeaders=document.querySelectorAll('.col-header');
-  const rowHeaders=document.querySelectorAll('.row-header');
-  const colH=Array.from(colHeaders).map(el=>el.innerText.replace(/\n/g,' ').trim());
-  const rowH=Array.from(rowHeaders).map(el=>el.innerText.replace(/\n/g,' ').trim());
-  document.getElementById('modalTitle').textContent=(colH[parseInt(cell.dataset.col)]||'')+' — '+(rowH[parseInt(cell.dataset.row)]||'');
-  document.getElementById('modalInput').value=cell.querySelector('input').value;
-  showTextEntry();
-  const mcBtn=document.getElementById('mcToggleBtn');
-  if(mcBtn)mcBtn.style.display=(Object.keys(mcOptions).length===0)?'none':'block';
-  document.getElementById('inputModal').classList.add('active');
-  document.getElementById('inputOverlay').classList.add('active');
-  setTimeout(()=>document.getElementById('modalInput').focus(),100);
-}
-function closeModal(){document.getElementById('inputModal').classList.remove('active');document.getElementById('inputOverlay').classList.remove('active');currentCell=null;document.getElementById('modalTitle').textContent='';document.getElementById('modalInput').value='';const mc=document.getElementById('mcOptions');if(mc)mc.innerHTML='';document.getElementById('textSection').classList.remove('hidden');document.getElementById('mcSection').classList.remove('visible');}
-function saveModalAnswer(){
-  if(currentCell){
-    const val=document.getElementById('modalInput').value;
-    currentCell.querySelector('input').value=val;
-    closeModal();
-  }
-}
-document.addEventListener('keypress',(e)=>{if(e.key==='Enter'&&document.getElementById('inputModal').classList.contains('active'))saveModalAnswer();});
-document.getElementById('inputOverlay').addEventListener('click',closeModal);
-
-/* ===== LIFELINES ===== */
-let bonusLifelineUsed = false;
-let bonusSurveyAnswers = [];
-const BONUS_SURVEY_KEY = '80sGrid_bonusSurveyAnswered41';
-const BONUS_SURVEY = {
-  options: [
-    { value:'Record Player', emoji:'🎵', label:'Record Player / Turntable' },
-    { value:'CD Player',     emoji:'💿', label:'CD Player' },
-    { value:'Cassette Deck', emoji:'📼', label:'Cassette Deck' },
-    { value:'8-Track',       emoji:'🎞️', label:'8-Track Player' },
-    { value:'None',          emoji:'😅', label:'None of these (sadly)' }
-  ]
-};
-
-function updateLifelineUI(){
-  for(let i=1;i<=3;i++){const pip=document.getElementById('pip'+i);if(i<=lifelinesRemaining){pip.classList.remove('used');pip.textContent='\uD83C\uDFAF';}else{pip.classList.add('used');pip.textContent='';}}
-  const countEl=document.getElementById('lifelineCount');const btnEl=document.getElementById('mcToggleBtn');const remainEl=document.getElementById('mcRemaining');
-  const bonusOffer=document.getElementById('bonusLifelineOffer');const modalBonusBtn=document.getElementById('modalBonusBtn');
-  if(remainEl)remainEl.textContent=lifelinesRemaining;
-  if(lifelinesRemaining===0){
-    countEl.textContent='None left!';countEl.classList.add('empty');
-    var scb=document.getElementById('secretCodeBtn');if(scb)scb.style.display='block';
-    if(btnEl){btnEl.disabled=true;btnEl.style.display='none';}
-    if(bonusOffer&&!bonusLifelineUsed)bonusOffer.style.display='block';
-    if(modalBonusBtn&&!bonusLifelineUsed)modalBonusBtn.style.display='block';
-  } else {
-    countEl.textContent=lifelinesRemaining+' remaining';countEl.classList.remove('empty');
-    var scb=document.getElementById('secretCodeBtn');if(scb)scb.style.display='none';
-    if(btnEl){btnEl.disabled=false;btnEl.style.display='block';}
-    if(bonusOffer)bonusOffer.style.display='none';
-    if(modalBonusBtn)modalBonusBtn.style.display='none';
-  }
-}
-function showMultipleChoice(){
-  if(lifelinesRemaining<=0)return;
-  const key=currentCell.dataset.row+'-'+currentCell.dataset.col;
-  if(yesNoKeys.includes(key)){const toast=document.getElementById('ynToast');toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2000);return;}
-  if(!mcOptions[key]||mcOptions[key].length===0)return;
-  const opts=[...mcOptions[key]];for(let i=opts.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[opts[i],opts[j]]=[opts[j],opts[i]];}
-  const container=document.getElementById('mcOptions');container.innerHTML='';
-  opts.forEach(opt=>{const btn=document.createElement('button');btn.className='mc-option';btn.textContent=opt;btn.onclick=()=>selectMCOption(opt);container.appendChild(btn);});
-  document.getElementById('textSection').classList.add('hidden');document.getElementById('mcSection').classList.add('visible');
-}
-function showTextEntry(){document.getElementById('textSection').classList.remove('hidden');document.getElementById('mcSection').classList.remove('visible');setTimeout(()=>document.getElementById('modalInput').focus(),60);}
-function selectMCOption(value){if(currentCell){currentCell.querySelector('input').value=value;lifelinesRemaining=Math.max(0,lifelinesRemaining-1);updateLifelineUI();try{gtag('event','lifeline_used',{quiz_number:QUIZ_NUM,lifelines_left:lifelinesRemaining});}catch(e){}closeModal();}}
-
-/* ===== BONUS LIFELINE MODAL ===== */
-function openBonusSurveyModal(){
-  if(bonusLifelineUsed)return;
-  switchBonusTab('survey');
-  bonusSurveyAnswers=[];
-  const container=document.getElementById('bonusSurveyOptions2');container.innerHTML='';
-  BONUS_SURVEY.options.forEach(opt=>{
-    const btn=document.createElement('button');
-    btn.style.cssText='width:100%;padding:11px 14px;border:2px solid #dee2e6;border-radius:10px;background:#f8f9fa;font-size:0.88em;font-weight:700;color:#333;cursor:pointer;text-align:left;transition:all 0.2s;display:flex;align-items:center;gap:10px;';
-    btn.innerHTML='<span style="font-size:1.3em">'+opt.emoji+'</span><span>'+opt.label+'</span>';
-    btn.dataset.value=opt.value;
-    btn.onclick=()=>toggleBonusSurveyOption(btn,opt.value);
-    container.appendChild(btn);
-  });
-  const claimBtn=document.getElementById('bonusSurveyBtn2');claimBtn.disabled=true;claimBtn.style.opacity='0.4';
-  document.getElementById('bonusSurveyOverlay').style.display='flex';
-}
-function openSecretCodeModal(){
-  switchBonusTab('code');
-  document.getElementById('secretCodeInput').value='';
-  document.getElementById('secretCodeError').style.display='none';
-  document.getElementById('secretCodeSuccess').style.display='none';
-  document.getElementById('secretCodeSubmitBtn').disabled=true;
-  document.getElementById('secretCodeSubmitBtn').style.opacity='0.4';
-  document.getElementById('bonusSurveyOverlay').style.display='flex';
-  setTimeout(()=>document.getElementById('secretCodeInput').focus(),100);
-}
-function switchBonusTab(tab){
-  const isSurvey=tab==='survey';
-  document.getElementById('bonusTabSurvey').style.display=isSurvey?'block':'none';
-  document.getElementById('bonusTabCode').style.display=isSurvey?'none':'block';
-  const sBtn=document.getElementById('tabSurveyBtn');const cBtn=document.getElementById('tabCodeBtn');
-  if(isSurvey){sBtn.style.background='#8B00FF';sBtn.style.color='white';sBtn.style.borderColor='#8B00FF';cBtn.style.background='#f5f5f5';cBtn.style.color='#888';cBtn.style.borderColor='#ddd';}
-  else{cBtn.style.background='#8B00FF';cBtn.style.color='white';cBtn.style.borderColor='#8B00FF';sBtn.style.background='#f5f5f5';sBtn.style.color='#888';sBtn.style.borderColor='#ddd';setTimeout(()=>document.getElementById('secretCodeInput').focus(),100);}
-}
-function validateSecretCode(){
-  const val=document.getElementById('secretCodeInput').value.trim();const btn=document.getElementById('secretCodeSubmitBtn');
-  document.getElementById('secretCodeError').style.display='none';
-  btn.disabled=val.length===0;btn.style.opacity=val.length>0?'1':'0.4';
-}
-function submitSecretCode(){
-  const code=document.getElementById('secretCodeInput').value.trim().toUpperCase();if(!code)return;
-  if(SECRET_CODES[code]){
-    document.getElementById('secretCodeSuccess').style.display='block';
-    document.getElementById('secretCodeError').style.display='none';
-    bonusLifelineUsed=true;
-    lifelinesRemaining=SECRET_CODES[code]==='unlimited'?99:Math.max(lifelinesRemaining,1);
-    updateLifelineUI();
-    setTimeout(()=>{closeBonusSurveyModal();showBonusGrantedToast(SECRET_CODES[code]==='unlimited');},800);
-  } else {
-    document.getElementById('secretCodeError').style.display='block';
-    document.getElementById('secretCodeSuccess').style.display='none';
-    document.getElementById('secretCodeInput').style.borderColor='#dc3545';
-    setTimeout(()=>{document.getElementById('secretCodeInput').style.borderColor='#dee2e6';},1500);
-  }
-}
-function closeBonusSurveyModal(){document.getElementById('bonusSurveyOverlay').style.display='none';}
-function toggleBonusSurveyOption(btn,value){
-  const allBtns=document.querySelectorAll('#bonusSurveyOptions2 button');
-  if(value==='None'){
-    bonusSurveyAnswers=['None'];
-    allBtns.forEach(b=>{const isNone=b.dataset.value==='None';b.style.borderColor=isNone?'#8B00FF':'#dee2e6';b.style.background=isNone?'linear-gradient(135deg,#f3eaff,#fff)':'#f8f9fa';b.style.color=isNone?'#8B00FF':'#333';});
-  } else {
-    bonusSurveyAnswers=bonusSurveyAnswers.filter(v=>v!=='None');
-    const noneBtn=document.querySelector('#bonusSurveyOptions2 button[data-value="None"]');
-    if(noneBtn){noneBtn.style.borderColor='#dee2e6';noneBtn.style.background='#f8f9fa';noneBtn.style.color='#333';}
-    const idx=bonusSurveyAnswers.indexOf(value);
-    if(idx>-1){bonusSurveyAnswers.splice(idx,1);btn.style.borderColor='#dee2e6';btn.style.background='#f8f9fa';btn.style.color='#333';}
-    else{bonusSurveyAnswers.push(value);btn.style.borderColor='#8B00FF';btn.style.background='linear-gradient(135deg,#f3eaff,#fff)';btn.style.color='#8B00FF';}
-  }
-  const claimBtn=document.getElementById('bonusSurveyBtn2');claimBtn.disabled=bonusSurveyAnswers.length===0;claimBtn.style.opacity=bonusSurveyAnswers.length>0?'1':'0.4';
-}
-function claimBonusLifeline(){
-  if(bonusSurveyAnswers.length===0)return;
-  localStorage.setItem(BONUS_SURVEY_KEY,JSON.stringify(bonusSurveyAnswers));
-  try{fetch('https://formspree.io/f/xeelpozw',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({type:'bonus_lifeline_survey',answers:bonusSurveyAnswers.join(', '),quiz:'Quiz 12',date:new Date().toISOString()})});}catch(e){}
-  bonusLifelineUsed=true;lifelinesRemaining=1;updateLifelineUI();closeBonusSurveyModal();showBonusGrantedToast(false);
-}
-function showBonusGrantedToast(isUnlimited){
-  let toast=document.getElementById('bonusGrantedToast');
-  if(!toast){toast=document.createElement('div');toast.id='bonusGrantedToast';toast.style.cssText='position:fixed;top:18%;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#8B00FF,#FF1493);color:white;padding:14px 28px;border-radius:14px;font-family:"Arial Black",Arial;font-size:1em;font-weight:900;letter-spacing:1px;box-shadow:0 0 30px rgba(139,0,255,0.5);z-index:8000;opacity:0;transition:opacity 0.3s;text-align:center;pointer-events:none;';document.body.appendChild(toast);}
-  toast.innerHTML=isUnlimited?'&#9854;&#65039; Unlimited Mode Activated!<br><span style="font-size:0.7em;font-weight:400;opacity:0.9;">All lifelines unlocked!</span>':'&#127919; Bonus Lifeline Unlocked!<br><span style="font-size:0.7em;font-weight:400;opacity:0.9;">Use it wisely!</span>';
-  toast.style.opacity='1';setTimeout(()=>{toast.style.opacity='0';},2800);
-}
-
-/* ===== SHARE ===== */
-function shareLink(){
-  const score=parseInt(localStorage.getItem(QUIZ_KEY)||'0')||null;
-  const text=score?"\uD83C\uDFB8 I scored "+score+"/9 on Len's 80sGrid Quiz "+QUIZ_NUM+"! Can you beat me?":"\uD83C\uDFB8 Think you know your 80s music? Try Len's 80sGrid Quiz "+QUIZ_NUM+"!";
-  const url='https://80sgrid.com/quiz'+QUIZ_NUM+'.html';
-  const isMobile=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-  if(isMobile&&navigator.share){navigator.share({title:"Len's 80sGrid",text:text,url:url}).catch(()=>{});}
-  else{navigator.clipboard.writeText(text+' '+url).then(()=>{const toast=document.createElement('div');toast.textContent='\u2705 Link copied! Paste it anywhere.';toast.style.cssText='position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:12px 22px;border-radius:10px;font-size:0.95em;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,0.4);';document.body.appendChild(toast);setTimeout(()=>toast.remove(),3000);}).catch(()=>alert(text+' '+url));}
-}
-function getLastScore(){return parseInt(localStorage.getItem(QUIZ_KEY)||'0')||0;}
-function getShareText(score){
-  const artistLine=document.querySelector('[style*="margin-top:-15px"]');
-  const artists=artistLine?artistLine.textContent.trim():'';
-  return score
-    ?'\uD83C\uDFB8 I scored '+score+'/9 on Len\'s 80sGrid Quiz '+QUIZ_NUM+(artists?' ('+artists+')':'')+'! Can you beat me? \u{1F449} https://80sgrid.com/quiz'+QUIZ_NUM+'.html'
-    :'\uD83C\uDFB8 Test your 80s music knowledge! Play Len\'s 80sGrid.com: https://80sgrid.com/quiz'+QUIZ_NUM+'.html';
-}
-function shareScore(){try{gtag('event','brag_score',{quiz_number:QUIZ_NUM,score:getLastScore()});}catch(e){}buildShareCard(getLastScore(),getShareText(getLastScore()));}
-
-function buildShareCard(score,text){
-  const existing=document.getElementById('shareCardOverlay');if(existing)existing.remove();
-  const overlay=document.createElement('div');
-  overlay.id='shareCardOverlay';
-  overlay.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,0.82);z-index:6000;display:flex;align-items:center;justify-content:center;padding:16px;overflow-y:auto;box-sizing:border-box;';
-  const box=document.createElement('div');
-  box.style.cssText='background:#fff;border:3px solid #FF1493;border-radius:18px;padding:22px 20px 18px;max-width:460px;width:100%;text-align:center;box-shadow:0 0 60px rgba(255,20,147,0.45);box-sizing:border-box;';
-  box.innerHTML=`
-    <div style="font-weight:900;color:#111;font-size:1.05em;letter-spacing:2px;margin-bottom:2px;">Van Halen, Def Leppard &amp; AC/DC</div>
-    <div style="font-size:0.7em;font-weight:700;color:#FF1493;letter-spacing:2px;margin-bottom:14px;">LEN'S 80sGRID.COM</div>
-    <canvas id="shareCassette" width="420" height="290" style="display:block;margin:0 auto 14px;border-radius:10px;max-width:100%;box-shadow:0 4px 24px rgba(0,0,0,0.35);"></canvas>
-    <div style="font-size:0.8em;color:#555;margin-bottom:12px;line-height:1.5;padding:0 4px;">
-      Show off your score! <strong>Save the image</strong> to post on Instagram or TikTok, or <strong>copy the text</strong> to share on Facebook or in a text message.
-    </div>
-    <div style="display:flex;gap:10px;margin-bottom:10px;">
-      <button onclick="downloadShareCard()" style="flex:1;padding:13px 8px;background:linear-gradient(135deg,#FF1493,#8B00FF);color:white;border:none;border-radius:9px;font-size:0.82em;font-weight:900;cursor:pointer;line-height:1.3;">⬇️ Save Image<br><span style="font-weight:400;font-size:0.85em;opacity:0.9;">Post to Instagram or TikTok</span></button>
-      <button onclick="copyShareText()" style="flex:1;padding:13px 8px;background:linear-gradient(135deg,#8B00FF,#4B0082);color:white;border:none;border-radius:9px;font-size:0.82em;font-weight:900;cursor:pointer;line-height:1.3;">📋 Copy Text<br><span style="font-weight:400;font-size:0.85em;opacity:0.9;">Share on Facebook or text</span></button>
-    </div>
-    <button onclick="document.getElementById('shareCardOverlay').remove()" style="background:none;border:none;color:#bbb;font-size:0.82em;cursor:pointer;width:100%;">✕ Close</button>
-  `;
-  overlay.appendChild(box);
-  overlay.onclick=(e)=>{if(e.target===overlay)overlay.remove();};
-  document.body.appendChild(overlay);
-  setTimeout(()=>drawCassetteCard(score),40);
-}
-
-function rrShare(c,x,y,w,h,r,fill,stroke){
-  c.beginPath();c.moveTo(x+r,y);c.lineTo(x+w-r,y);c.quadraticCurveTo(x+w,y,x+w,y+r);
-  c.lineTo(x+w,y+h-r);c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
-  c.lineTo(x+r,y+h);c.quadraticCurveTo(x,y+h,x,y+h-r);
-  c.lineTo(x,y+r);c.quadraticCurveTo(x,y,x+r,y);c.closePath();
-  if(fill)c.fill();if(stroke)c.stroke();
-}
-
-function drawCassetteCard(score){
-  const canvas=document.getElementById('shareCassette');if(!canvas)return;
-  const c=canvas.getContext('2d');const W=canvas.width,H=canvas.height;
-  c.fillStyle='#fff';c.fillRect(0,0,W,H);
-  // Shell
-  const sx=10,sy=8,sw=W-20,sh=H-16,sr=10;
-  c.fillStyle='rgba(0,0,0,0.2)';rrShare(c,sx+5,sy+5,sw,sh,sr,true,false);
-  c.fillStyle='#1c1c1c';rrShare(c,sx,sy,sw,sh,sr,true,false);
-  c.strokeStyle='#FF1493';c.lineWidth=2;rrShare(c,sx,sy,sw,sh,sr,false,true);
-  // Notched corners
-  const nc=14;c.fillStyle='#fff';
-  [[sx,sy],[sx+sw-nc,sy],[sx,sy+sh-nc],[sx+sw-nc,sy+sh-nc]].forEach(([nx,ny])=>c.fillRect(nx,ny,nc,nc));
-  c.strokeStyle='#FF1493';c.lineWidth=2;rrShare(c,sx,sy,sw,sh,sr,false,true);
-  // Screws
-  [[sx+20,sy+20],[sx+sw-20,sy+20],[sx+20,sy+sh-20],[sx+sw-20,sy+sh-20]].forEach(([qx,qy])=>{
-    c.beginPath();c.arc(qx,qy,5,0,Math.PI*2);c.fillStyle='#111';c.fill();
-    c.strokeStyle='#555';c.lineWidth=1;c.stroke();c.strokeStyle='#666';c.lineWidth=1.2;
-    c.beginPath();c.moveTo(qx-3,qy);c.lineTo(qx+3,qy);c.stroke();
-    c.beginPath();c.moveTo(qx,qy-3);c.lineTo(qx,qy+3);c.stroke();
-  });
-  // Label
-  const lx=sx+14,ly=sy+12,lw=sw-28,lh=sh-50;
-  c.fillStyle='#f2f2f2';rrShare(c,lx,ly,lw,lh,4,true,false);
-  const pg=c.createLinearGradient(lx,ly,lx,ly+lh);
-  pg.addColorStop(0,'rgba(255,255,255,0.9)');pg.addColorStop(1,'rgba(230,230,230,0.6)');
-  c.fillStyle=pg;rrShare(c,lx,ly,lw,lh,4,true,false);
-  // Ruled lines
-  c.strokeStyle='rgba(160,170,210,0.5)';c.lineWidth=0.8;
-  for(let lineY=ly+20;lineY<ly+lh*0.42;lineY+=11){c.beginPath();c.moveTo(lx+8,lineY);c.lineTo(lx+lw-8,lineY);c.stroke();}
-  // "A" badge
-  c.fillStyle='#111';rrShare(c,lx+8,ly+7,22,22,3,true,false);
-  c.fillStyle='#fff';c.textAlign='center';c.font='bold 14px Arial';c.fillText('A',lx+19,ly+23);
-  // Stripes
-  const stripeY=ly+lh*0.44;
-  c.fillStyle='#e8850a';c.fillRect(lx,stripeY,lw,7);
-  const gg=c.createLinearGradient(0,stripeY+7,0,stripeY+13);
-  gg.addColorStop(0,'#d4a020');gg.addColorStop(1,'#a07010');
-  c.fillStyle=gg;c.fillRect(lx,stripeY+7,lw,6);
-  // Quiz title — dynamic
-  const artistLine=document.querySelector('[style*="margin-top:-15px"]');
-  const artistText=artistLine?artistLine.textContent.trim().toUpperCase():'';
-  c.textAlign='center';c.font='bold 17px Arial';c.fillStyle='#1a1a1a';
-  c.fillText('QUIZ '+QUIZ_NUM,W/2,ly+26);
-  c.font='bold 9px Arial';c.fillStyle='#222';
-  const maxW=lw-20;
-  c.save();if(c.measureText(artistText).width>maxW){c.scale(maxW/c.measureText(artistText).width,1);}
-  c.fillText(artistText,W/2*(maxW/Math.max(c.measureText(artistText).width,maxW))||W/2,ly+40);
-  c.restore();
-  c.font='bold 9px Arial';c.fillStyle='#222';c.textAlign='center';
-  // Clamp artist text width
-  if(c.measureText(artistText).width>lw-16){
-    c.save();c.beginPath();c.rect(lx+4,ly,lw-8,50);c.clip();
-    c.fillText(artistText,W/2,ly+40);c.restore();
-  } else {c.fillText(artistText,W/2,ly+40);}
-  // Small label info
-  c.textAlign='left';c.font='6px Arial';c.fillStyle='#555';
-  c.fillText('Normal Bias',lx+8,stripeY-16);c.fillText('EQ-120μs',lx+8,stripeY-8);
-  c.textAlign='right';c.font='6px Arial';
-  c.fillText('Noise',lx+lw-8,stripeY-22);c.fillText('Reduction',lx+lw-8,stripeY-14);
-  c.strokeStyle='#555';c.lineWidth=0.8;
-  c.strokeRect(lx+lw-30,stripeY-10,6,6);c.fillStyle='#c00';c.font='8px Arial';c.textAlign='left';
-  c.fillText('✕',lx+lw-31,stripeY-4);c.fillStyle='#555';c.font='6px Arial';
-  c.fillText('IN',lx+lw-22,stripeY-5);c.strokeRect(lx+lw-30,stripeY-2,6,6);c.fillText('OUT',lx+lw-22,stripeY+4);
-  // Bottom strip
-  const bsy=ly+lh,bsh=sy+sh-bsy-10;
-  c.fillStyle='#111';rrShare(c,lx,bsy,lw,bsh,4,true,false);
-  // Star + LEN.
-  const starX=lx+lw-95,starY2=bsy+bsh/2+1;
-  drawStar4Card(c,starX,starY2,11,'#FF1493');
-  c.textAlign='left';c.font='bold 20px Arial Black,Arial';c.fillStyle='#fff';
-  c.fillText('LEN.',starX+17,bsy+bsh-7);
-  c.font='6px Arial';c.fillStyle='rgba(255,20,147,0.8)';c.fillText('80sGRID.COM',starX+17,bsy+9);
-  // Quiz-N bottom left
-  c.textAlign='left';c.font='bold 15px Arial Black,Arial';c.fillStyle='#fff';
-  c.fillText('Quiz-',lx+8,bsy+bsh-7);c.fillStyle='#8B00FF';
-  c.fillText(String(QUIZ_NUM),lx+8+c.measureText('Quiz-').width,bsy+bsh-7);
-  // Stars
-  const stars=Math.round(((score||0)/9)*5);
-  c.textAlign='center';c.font='18px serif';c.fillStyle='#FF1493';
-  c.shadowColor='rgba(255,20,147,0.5)';c.shadowBlur=6;
-  c.fillText('★'.repeat(stars)+'☆'.repeat(5-stars),W/2,bsy+22);c.shadowBlur=0;
-  // Tape window
-  const wx=lx+lw*0.12,wy=ly+lh*0.24,ww=lw*0.76,wh=bsy-wy-4;
-  c.fillStyle='#111';rrShare(c,wx-5,wy-5,ww+10,wh+10,7,true,false);
-  c.fillStyle='#f5f5f5';rrShare(c,wx,wy,ww,wh,4,true,false);
-  const winEdge=c.createRadialGradient(wx+ww/2,wy+wh/2,wh*0.2,wx+ww/2,wy+wh/2,wh*0.85);
-  winEdge.addColorStop(0,'rgba(0,0,0,0)');winEdge.addColorStop(1,'rgba(0,0,0,0.1)');
-  c.fillStyle=winEdge;rrShare(c,wx,wy,ww,wh,4,true,false);
-  const midY=wy+wh*0.5,reelR=Math.min(wh*0.42,52);
-  const reelLX=wx+ww*0.22,reelRX=wx+ww*0.78;
-  // Center slot
-  const slotW=ww*0.20,slotH=wh*0.60;
-  const slotX=W/2-slotW/2,slotY2=midY-slotH/2;
-  c.fillStyle='#222';rrShare(c,slotX-3,slotY2-3,slotW+6,slotH+6,4,true,false);
-  c.fillStyle='#ffffff';rrShare(c,slotX,slotY2,slotW,slotH,2,true,false);
-  c.strokeStyle='rgba(0,0,0,0.12)';c.lineWidth=1;
-  for(let si=0;si<4;si++){const slitY=slotY2+4+si*(slotH-8)/3;c.beginPath();c.moveTo(slotX+3,slitY);c.lineTo(slotX+slotW-3,slitY);c.stroke();}
-  // Tape
-  const tH=8,tapeY=midY-tH/2,gL=slotX,gR=slotX+slotW;
-  c.fillStyle='#2e1a08';
-  c.fillRect(reelLX,tapeY,gL-reelLX,tH);c.fillRect(gR,tapeY,reelRX-gR,tH);
-  const tg=c.createLinearGradient(0,tapeY,0,tapeY+tH);
-  tg.addColorStop(0,'rgba(160,100,20,0.6)');tg.addColorStop(1,'rgba(0,0,0,0.5)');
-  c.fillStyle=tg;c.fillRect(reelLX,tapeY,gL-reelLX,tH);c.fillRect(gR,tapeY,reelRX-gR,tH);
-  c.strokeStyle='rgba(15,8,0,0.6)';c.lineWidth=0.7;
-  [[reelLX,gL],[gR,reelRX]].forEach(([x1,x2])=>{c.beginPath();c.moveTo(x1,tapeY);c.lineTo(x2,tapeY);c.stroke();c.beginPath();c.moveTo(x1,tapeY+tH);c.lineTo(x2,tapeY+tH);c.stroke();});
-  // Reels
-  drawWhiteReelCard(c,reelLX,midY,reelR);drawWhiteReelCard(c,reelRX,midY,reelR);
-  // Score
-  c.textAlign='center';c.font='bold 8px Arial';c.fillStyle='rgba(139,0,255,0.7)';c.fillText('I  SCORED',W/2,midY-20);
-  c.font='900 48px Arial Black,Arial';c.fillStyle='#8B00FF';
-  c.shadowColor='rgba(139,0,255,0.8)';c.shadowBlur=18;c.fillText(`${score||'?'}/9`,W/2,midY+18);c.shadowBlur=0;
-  // Guide pins
-  [[W/2-48,sy+sh-14],[W/2,sy+sh-14],[W/2+48,sy+sh-14]].forEach(([px,py])=>{
-    c.beginPath();c.arc(px,py,5,0,Math.PI*2);c.fillStyle='#0a0a0a';c.fill();c.strokeStyle='#444';c.lineWidth=1;c.stroke();
-  });
-}
-
-function drawStar4Card(c,cx,cy,r,color){
-  c.save();c.fillStyle=color;c.shadowColor=color;c.shadowBlur=8;c.beginPath();
-  for(let i=0;i<8;i++){const a=(i/8)*Math.PI*2-Math.PI/2,rad=(i%2===0)?r:r*0.38;const px=cx+Math.cos(a)*rad,py=cy+Math.sin(a)*rad;i===0?c.moveTo(px,py):c.lineTo(px,py);}
-  c.closePath();c.fill();c.shadowBlur=0;c.restore();
-}
-
-function drawWhiteReelCard(c,cx,cy,r){
-  const tapeInnerR=r*0.28,tapeOuterR=r*0.82,numLayers=18;
-  for(let i=0;i<numLayers;i++){const t=i/numLayers,layR=tapeInnerR+t*(tapeOuterR-tapeInnerR);const brightness=0.55+0.45*Math.sin(i*0.9);const r2=Math.floor(200*brightness+40),g2=Math.floor(140*brightness+20),b2=Math.floor(10*brightness);c.beginPath();c.arc(cx,cy,layR,0,Math.PI*2);c.strokeStyle=`rgb(${r2},${g2},${b2})`;c.lineWidth=(tapeOuterR-tapeInnerR)/numLayers+0.5;c.stroke();}
-  const tapeGlow=c.createRadialGradient(cx-r*0.25,cy-r*0.3,2,cx,cy,tapeOuterR);
-  tapeGlow.addColorStop(0,'rgba(255,220,100,0.35)');tapeGlow.addColorStop(1,'rgba(0,0,0,0.2)');
-  c.beginPath();c.arc(cx,cy,tapeOuterR,0,Math.PI*2);c.fillStyle=tapeGlow;c.fill();
-  c.beginPath();c.arc(cx,cy,r,0,Math.PI*2);
-  const rg=c.createRadialGradient(cx-r*0.2,cy-r*0.25,2,cx,cy,r);
-  rg.addColorStop(0,'#f8f8f8');rg.addColorStop(0.5,'#ddd');rg.addColorStop(1,'#bbb');
-  c.fillStyle=rg;c.fill();c.strokeStyle='#888';c.lineWidth=1.5;c.stroke();
-  c.beginPath();c.arc(cx,cy,r-3,0,Math.PI*2);c.strokeStyle='rgba(0,0,0,0.2)';c.lineWidth=1.5;c.stroke();
-  for(let i=0;i<4;i++){const a=(i/4)*Math.PI*2-Math.PI/4,hw=0.20;c.beginPath();c.moveTo(cx+Math.cos(a-hw)*12,cy+Math.sin(a-hw)*12);c.lineTo(cx+Math.cos(a-hw*0.5)*(r-4),cy+Math.sin(a-hw*0.5)*(r-4));c.lineTo(cx+Math.cos(a+hw*0.5)*(r-4),cy+Math.sin(a+hw*0.5)*(r-4));c.lineTo(cx+Math.cos(a+hw)*12,cy+Math.sin(a+hw)*12);c.closePath();const sg=c.createLinearGradient(cx+Math.cos(a)*10,cy+Math.sin(a)*10,cx+Math.cos(a)*(r-5),cy+Math.sin(a)*(r-5));sg.addColorStop(0,'#f0f0f0');sg.addColorStop(0.4,'#fff');sg.addColorStop(1,'#ccc');c.fillStyle=sg;c.fill();c.strokeStyle='rgba(0,0,0,0.15)';c.lineWidth=0.5;c.stroke();}
-  c.beginPath();c.arc(cx,cy,11,0,Math.PI*2);
-  const hg=c.createRadialGradient(cx-3,cy-3,1,cx,cy,11);
-  hg.addColorStop(0,'#fff');hg.addColorStop(0.6,'#e0e0e0');hg.addColorStop(1,'#bbb');
-  c.fillStyle=hg;c.fill();c.strokeStyle='#999';c.lineWidth=1;c.stroke();
-  c.beginPath();c.arc(cx,cy,8,0,Math.PI*2);c.strokeStyle='rgba(0,0,0,0.15)';c.lineWidth=1;c.stroke();
-  c.beginPath();c.arc(cx,cy,6,0,Math.PI*2);c.strokeStyle='rgba(255,20,147,0.6)';c.lineWidth=1.5;c.stroke();
-  c.beginPath();for(let i=0;i<5;i++){const a=(i/5)*Math.PI*2-Math.PI/2,px=cx+Math.cos(a)*4.5,py=cy+Math.sin(a)*4.5;i===0?c.moveTo(px,py):c.lineTo(px,py);}c.closePath();c.fillStyle='#333';c.fill();
-}
-
-function downloadShareCard(){
-  const canvas=document.getElementById('shareCassette');if(!canvas)return;
-  const link=document.createElement('a');
-  link.download='80sgrid-quiz'+QUIZ_NUM+'-score.png';
-  link.href=canvas.toDataURL('image/png');link.click();
-}
-
-function copyShareText(){
-  const score=getLastScore();const text=getShareText(score);
-  navigator.clipboard.writeText(text).then(()=>{
-    const btn=event.target.closest('button');const orig=btn.innerHTML;
-    btn.innerHTML='✅ Copied!';setTimeout(()=>btn.innerHTML=orig,2000);
-  }).catch(()=>alert(text));
-}
-
-/* ===== PERSISTENT SHARE ROW ===== */
-function persistentShareQuiz(){
-  const score=parseInt(localStorage.getItem(QUIZ_KEY)||'0')||null;
-  const bragBtn=document.getElementById('persistentBragBtn');
-  const bragSub=document.getElementById('persistentBragSub');
-  if(score){bragBtn.style.opacity='1';bragBtn.disabled=false;bragSub.textContent='Post your score on social!';}
-  else{bragBtn.style.opacity='0.5';bragBtn.disabled=true;bragSub.textContent='⚠️ Check your answers first to unlock this';}
-  document.getElementById('persistentShareModal').style.display='flex';
-}
-function persistentBragScore(){
-  const score=parseInt(localStorage.getItem(QUIZ_KEY)||'0')||null;
-  if(!score){persistentShareQuiz();return;}
-  doShareScore();
-}
-function doShareLink(){shareLink();}
-function doShareScore(){shareScore();}
-function closePersistentShareModal(){document.getElementById('persistentShareModal').style.display='none';}
-
-/* ===== MAIN GAME LOGIC ===== */
-function normalizeString(str){return str.toLowerCase().replace(/[''']/g,'').replace(/[^a-z0-9\s]/g,'').replace(/\s+/g,' ').trim();}
-function checkAnswers(){
-  let _isFirstPlayToday=false;
-  const previousScore=parseInt(localStorage.getItem(QUIZ_KEY)||'0');const isThisAReplay=previousScore>0;
-  if(!isThisAReplay&&!hasNewPlaysLeft()){document.getElementById('limitModal').classList.add('show');return;}
-  const cells=document.querySelectorAll('.cell');let correct=0,total=0;
-  cells.forEach(cell=>{
-    const input=cell.querySelector('input');const userAnswer=normalizeString(input.value);const key=cell.dataset.row+'-'+cell.dataset.col;
-    if(userAnswer){total++;const valid=answers[key].map(a=>normalizeString(a));if(valid.some(a=>userAnswer===a||userAnswer.includes(a)||a.includes(userAnswer))){cell.classList.add('correct');cell.classList.remove('incorrect');correct++;}else{cell.classList.add('incorrect');cell.classList.remove('correct');}}
-  });
-  if(total===0){alert('Fill in some answers first!');return;}
-  if(!sessionStorage.getItem(SESSION_KEY)){
-    let plays=(parseInt(localStorage.getItem(PLAYS_KEY))||PLAYS_START);plays++;localStorage.setItem(PLAYS_KEY,plays);updatePlaysCounter();sessionStorage.setItem(SESSION_KEY,'true');
-    if(!isThisAReplay){incrementQuizzesPlayedToday();_isFirstPlayToday=true;}
-    const tot=parseInt(localStorage.getItem('totalQuizzesPlayed')||'0')+1;localStorage.setItem('totalQuizzesPlayed',tot);
-    updateStreak();
-    const best=parseInt(localStorage.getItem('bestQuizScore')||'0');if(correct>best)localStorage.setItem('bestQuizScore',correct);
-  }
-  const oldScore=parseInt(localStorage.getItem(QUIZ_KEY)||'0');if(correct>oldScore)localStorage.setItem(QUIZ_KEY,correct);
-  document.getElementById('score').textContent='You got '+correct+' out of '+total+' correct!';
-  document.getElementById('results').style.display='block';
-  try{gtag('event','check_answers',{quiz_number:QUIZ_NUM,score:correct,total:total,is_replay:isThisAReplay});}catch(e){}
-  updatePostQuizUI();
-  if(correct>=8&&total===9)setTimeout(()=>{document.getElementById('highScoreEntry').style.display='block';document.getElementById('initial1').focus();},1000);
-  displayLeaderboard();
-  maybeShowSurvey(_isFirstPlayToday);
-}
-/* FIX: use innerHTML not textContent so emoji HTML entity renders */
-function updatePlaysCounter(){let plays=(parseInt(localStorage.getItem(PLAYS_KEY))||PLAYS_START);document.getElementById('playsCounter').innerHTML='&#127918; '+plays.toLocaleString()+' plays';}
-function showLeaderboard(){displayLeaderboard();document.getElementById('leaderboard').scrollIntoView({behavior:'smooth'});}
-function resetGrid(){document.querySelectorAll('.cell input').forEach(i=>{i.value='';i.parentElement.classList.remove('correct','incorrect');});document.getElementById('results').style.display='none';document.getElementById('highScoreEntry').style.display='none';}
-function saveHighScore(){
-  const i1=document.getElementById('initial1').value.toUpperCase();const i2=document.getElementById('initial2').value.toUpperCase();const i3=document.getElementById('initial3').value.toUpperCase();
-  if(!i1||!i2||!i3){alert('Please enter all 3 initials!');return;}
-  let totalCorrect=0;let quizzesPlayed=0;
-  for(let i=1;i<=40;i++){const s=parseInt(localStorage.getItem('quiz'+i+'Score')||0);totalCorrect+=s;if(s>0)quizzesPlayed++;}
-  const possible=quizzesPlayed*9;const pct=possible>0?Math.round((totalCorrect/possible)*100):0;
-  if(pct>=80){let scores=JSON.parse(localStorage.getItem('80sGridScoresCombined')||'[]');scores.push({initials:i1+i2+i3,pct:pct,quizzes:quizzesPlayed,date:new Date().toLocaleDateString('en-US',{month:'numeric',day:'numeric',year:'2-digit'})});scores.sort((a,b)=>b.pct-a.pct);scores=scores.slice(0,10);localStorage.setItem('80sGridScoresCombined',JSON.stringify(scores));}
-  document.getElementById('highScoreEntry').style.display='none';displayLeaderboard();
-}
-function displayLeaderboard(){
-  let scores=JSON.parse(localStorage.getItem('80sGridScoresCombined')||'[]');
-  if(scores.length<10)scores=[...scores,...FAKE_SCORES].slice(0,10);
-  scores.sort((a,b)=>b.pct-a.pct);
-  const html=scores.map((s,i)=>'<div class="leaderboard-item"><span class="leaderboard-rank">'+String(i+1).padStart(2,'0')+'.</span><span class="leaderboard-initials">'+s.initials+'</span><span class="leaderboard-score">'+s.pct+'%</span><span class="leaderboard-date">'+s.date+'</span></div>').join('');
-  document.getElementById('leaderboardList').innerHTML=html;document.getElementById('leaderboard').style.display='block';
-}
-document.getElementById('initial1').addEventListener('input',function(){if(this.value)document.getElementById('initial2').focus();});
-document.getElementById('initial2').addEventListener('input',function(){if(this.value)document.getElementById('initial3').focus();});
-document.getElementById('initial3').addEventListener('keypress',function(e){if(e.key==='Enter')saveHighScore();});
 
 /* ===== NAV ===== */
-
+const ALL_NAV_QUIZZES=Object.keys(QUIZ_DATA).sort(function(a,b){return parseInt(a)-parseInt(b);}).map(function(n){var num=parseInt(n);return{n:num,f:num===1?'index.html':'quiz'+num+'.html',c:QUIZ_DATA[num].nav_diff||'medium'};});
+const NAV_GROUPS=[ALL_NAV_QUIZZES.slice(0,10),ALL_NAV_QUIZZES.slice(10,20),ALL_NAV_QUIZZES.slice(20,30),ALL_NAV_QUIZZES.slice(30,40),ALL_NAV_QUIZZES.slice(40,50),ALL_NAV_QUIZZES.slice(50,60),ALL_NAV_QUIZZES.slice(60)];
+const GROUP_LABELS=['1 – 10','11 – 20','21 – 30','31 – 40','41 – 50','51 – 60','61 – 70'];
+let navActiveGroup=QUIZ_NUM<=10?0:QUIZ_NUM<=20?1:QUIZ_NUM<=30?2:QUIZ_NUM<=40?3:QUIZ_NUM<=50?4:QUIZ_NUM<=60?5:6;
 function hasPlayedQuiz(n){const key=n===1?'quiz1Score':'quiz'+n+'Score';return parseInt(localStorage.getItem(key)||'0')>0;}
 function showNavGroup(idx){navActiveGroup=idx;document.querySelectorAll('.group-tab').forEach(function(t,i){t.classList.toggle('active',i===idx);});renderNavGrid();}
 function renderNavGrid(){
@@ -1570,73 +1000,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-</body>
-</html>
-
-const ALL_NAV_QUIZZES=Object.keys(QUIZ_DATA).sort(function(a,b){return parseInt(a)-parseInt(b);}).map(function(n){var num=parseInt(n);return{n:num,f:num===1?'index.html':'quiz'+num+'.html',c:QUIZ_DATA[num].nav_diff||'medium'};});
-const NAV_GROUPS=[ALL_NAV_QUIZZES.slice(0,10),ALL_NAV_QUIZZES.slice(10,20),ALL_NAV_QUIZZES.slice(20,30),ALL_NAV_QUIZZES.slice(30,40),ALL_NAV_QUIZZES.slice(40,50),ALL_NAV_QUIZZES.slice(50,60),ALL_NAV_QUIZZES.slice(60)];
-const GROUP_LABELS=['1 \u2013 10','11 \u2013 20','21 \u2013 30','31 \u2013 40','41 \u2013 50','51 \u2013 60','61 \u2013 70'];
-let navActiveGroup=QUIZ_NUM<=10?0:QUIZ_NUM<=20?1:QUIZ_NUM<=30?2:QUIZ_NUM<=40?3:QUIZ_NUM<=50?4:QUIZ_NUM<=60?5:6;
-
-document.addEventListener('DOMContentLoaded',function(){
-  initQuizPage();initializeCells();updatePlaysCounter();displayLeaderboard();initNav();restoreSurveyOnLoad();initSponsorBox();
-  var ov=document.getElementById('inputOverlay');if(ov) ov.addEventListener('click',closeModal);
-  document.querySelectorAll('.feedback-star').forEach(function(s,i){s.addEventListener('mouseenter',function(){updateStars(i+1);});s.addEventListener('mouseleave',function(){updateStars(feedbackRating);});});
-});
-</script>
-
-<!-- ===== FEEDBACK MODAL ===== -->
-<style>
-.feedback-modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:4000; display:none; align-items:center; justify-content:center; }
-.feedback-modal-overlay.active { display:flex; }
-.feedback-modal { background:#000; border:3px solid #FF1493; border-radius:15px; padding:35px 30px; width:90%; max-width:400px; box-shadow:0 0 40px rgba(255,20,147,0.6); font-family:'Courier New',monospace; position:relative; box-sizing:border-box; }
-.feedback-modal h2 { color:#FF1493; text-shadow:0 0 10px #FF1493; font-size:1.2em; letter-spacing:3px; margin:0 0 6px; text-align:center; }
-.feedback-modal-sub { color:#00ffff; text-align:center; font-size:0.72em; letter-spacing:2px; margin-bottom:20px; }
-.feedback-stars { display:flex; justify-content:center; gap:10px; margin-bottom:18px; }
-.feedback-star { font-size:2em; cursor:pointer; color:#333; transition:color 0.15s,transform 0.15s; user-select:none; }
-.feedback-star.lit { color:#FFD700; text-shadow:0 0 10px rgba(255,215,0,0.7); }
-.feedback-star:hover { transform:scale(1.2); }
-.feedback-label { color:#aaa; font-size:0.72em; letter-spacing:1px; margin-bottom:6px; display:block; }
-.feedback-textarea { width:100%; background:rgba(255,255,255,0.05); border:2px solid rgba(255,20,147,0.4); border-radius:8px; padding:12px; color:#00ff88; font-family:'Courier New',monospace; font-size:0.9em; resize:vertical; min-height:80px; box-sizing:border-box; outline:none; margin-bottom:14px; }
-.feedback-textarea::placeholder { color:rgba(0,255,136,0.3); }
-.feedback-textarea:focus { border-color:#FF1493; }
-.feedback-quiz-tag { background:rgba(102,126,234,0.15); border:1px solid rgba(102,126,234,0.4); border-radius:6px; padding:6px 12px; color:#667eea; font-size:0.72em; letter-spacing:1px; margin-bottom:16px; text-align:center; display:block; }
-.feedback-submit { width:100%; background:linear-gradient(135deg,#FF1493,#8B00FF); color:white; border:none; padding:13px; border-radius:8px; font-family:'Courier New',monospace; font-weight:bold; font-size:1em; cursor:pointer; letter-spacing:2px; }
-.feedback-close { position:absolute; top:14px; right:18px; background:none; border:none; color:#555; font-size:1.4em; cursor:pointer; line-height:1; padding:0; }
-.feedback-close:hover { color:#FF1493; }
-.feedback-success { text-align:center; padding:20px 0; display:none; }
-.feedback-success .big { font-size:2.5em; display:block; margin-bottom:10px; }
-.feedback-success p { color:#00ff88; font-size:0.95em; line-height:1.6; margin:0; }
-</style>
-<div class="feedback-modal-overlay" id="feedbackOverlay" onclick="if(event.target===this)closeFeedback()">
-  <div class="feedback-modal">
-    <button class="feedback-close" onclick="closeFeedback()">&#10005;</button>
-    <div id="feedbackForm">
-      <h2>&#127926; FEEDBACK &#127926;</h2>
-      <div class="feedback-modal-sub">TELL US WHAT YOU THINK</div>
-      <span class="feedback-quiz-tag">&#127918; Currently playing: Quiz 12</span>
-      <div class="feedback-stars">
-        <span class="feedback-star" onclick="setRating(1)">&#9733;</span>
-        <span class="feedback-star" onclick="setRating(2)">&#9733;</span>
-        <span class="feedback-star" onclick="setRating(3)">&#9733;</span>
-        <span class="feedback-star" onclick="setRating(4)">&#9733;</span>
-        <span class="feedback-star" onclick="setRating(5)">&#9733;</span>
-      </div>
-      <span class="feedback-label">WHAT'S ON YOUR MIND?</span>
-      <textarea class="feedback-textarea" id="feedbackText" placeholder="Wrong answer? Great quiz? Idea for a new one? Tell us..."></textarea>
-      <button class="feedback-submit" onclick="submitFeedback()">SUBMIT FEEDBACK</button>
-    </div>
-    <div class="feedback-success" id="feedbackSuccess">
-      <span class="big">&#127775;</span>
-      <p>Thanks for the feedback!<br><br>
-      <span style="color:#FFD700;">Your input helps make 80sGrid better for everyone.</span><br><br>
-      <span style="color:#aaa;font-size:0.85em;">— Len</span></p>
-    </div>
-  </div>
-</div>
-
-<script>
-</body>
-</html>
 </body>
 </html>
